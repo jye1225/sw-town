@@ -1,0 +1,18 @@
+# OS and editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# Local configuration and generated files
+.env
+.env.*
+!.env.example
+*.log
+node_modules/
+dist/
+__pycache__/

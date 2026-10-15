@@ -1,0 +1,60 @@
+/* 전체 페이지에서 사용하는 공통 스타일입니다. */
+:root {
+  --color-text: #222222;
+  --color-muted: #666666;
+  --color-border: #e5e5e5;
+  --color-link: #245ac1;
+  --page-width: 960px;
+}
+
+body {
+  color: var(--color-text);
+  background-color: #ffffff;
+  font-family: system-ui, -apple-system, "Malgun Gothic", sans-serif;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+
+a {
+  color: var(--color-link);
+  text-underline-offset: 0.2em;
+}
+
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.site-header,
+.container,
+.site-footer {
+  width: min(var(--page-width), calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.site-header {
+  padding-block: 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-logo {
+  color: var(--color-text);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.container {
+  padding-block: 40px;
+}
+
+.container > * + * {
+  margin-top: 16px;
+}
+
+.site-footer {
+  padding-block: 20px;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-muted);
+  font-size: 0.875rem;
+}
