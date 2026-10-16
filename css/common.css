@@ -1,3 +1,30 @@
+@font-face {
+    font-family: 'Okticon';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408@1.0/Ownglyph_okticon-Lt.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Okticon';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408@1.0/Ownglyph_okticon-Rg.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Okticon';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408@1.0/Ownglyph_okticon-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'IsYun';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
 /* =========================================
    Common: 변수, 리셋, 헤더, 네비, 푸터
    ========================================= */
@@ -17,7 +44,7 @@
   --radius-md: 10px;
   --radius-lg: 12px;
 
-  --font-base: ui-sans-serif, system-ui, -apple-system, "Apple SD Gothic Neo",
+  --font-base: "IsYun", ui-sans-serif, system-ui, -apple-system, "Apple SD Gothic Neo",
     "Malgun Gothic", "Segoe UI", Roboto, sans-serif;
 }
 
