@@ -1,21 +1,61 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SW Town | 회원가입</title>
-    <link rel="stylesheet" href="css/reset.css" />
+    <title>회원가입 | SM TOWN</title>
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/auth.css" />
   </head>
   <body>
-    <header class="site-header"><a class="site-logo" href="index.html">SW Town</a></header>
-    <main class="container">
-      <h1>회원가입</h1>
-      <!-- TODO: 회원가입 화면의 HTML과 CSS를 작성합니다. -->
-      <p>화면 준비 중입니다.</p>
-      <a href="login.html">로그인 페이지</a>
-    </main>
-    <footer class="site-footer"><a href="index.html">홈으로</a></footer>
+    <div class="page">
+      <header class="site-header site-header--center">
+        <a href="index.html" class="logo">SM TOWN.</a>
+      </header>
+
+      <main class="page-main auth">
+        <form class="auth__box" action="#" method="post">
+          <div class="auth__head">
+            <h1 class="auth__title">회원가입</h1>
+            <p class="auth__desc">새로운 친구와 나만의 순간을 시작해요.</p>
+          </div>
+
+          <div class="form-field">
+            <label for="email" class="form-field__label">이메일</label>
+            <input type="email" id="email" name="email" class="form-field__input"
+              placeholder="이메일을 입력해 주세요" autocomplete="email" required />
+          </div>
+
+          <div class="form-field">
+            <label for="password" class="form-field__label">비밀번호</label>
+            <input type="password" id="password" name="password" class="form-field__input"
+              placeholder="8자 이상 입력해 주세요" minlength="8" autocomplete="new-password" required />
+          </div>
+
+          <div class="form-field">
+            <label for="password-confirm" class="form-field__label">비밀번호 확인</label>
+            <input type="password" id="password-confirm" name="passwordConfirm" class="form-field__input"
+              placeholder="비밀번호를 한 번 더 입력해 주세요" autocomplete="new-password" required />
+          </div>
+
+          <div class="form-field">
+            <label for="nickname" class="form-field__label">닉네임</label>
+            <input type="text" id="nickname" name="nickname" class="form-field__input"
+              placeholder="사용할 닉네임을 입력해 주세요" required />
+          </div>
+
+          <button type="submit" class="btn btn--primary">회원가입</button>
+
+          <p class="auth__switch">
+            이미 회원이신가요? <a href="login.html">로그인 ›</a>
+          </p>
+        </form>
+      </main>
+
+      <footer class="site-footer">
+        <p>© 2026 SM TOWN. 모든 권리 보유.</p>
+        <p>SM TOWN 팀 | 대학 팀 프로젝트</p>
+      </footer>
+    </div>
   </body>
 </html>
