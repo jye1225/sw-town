@@ -28,8 +28,11 @@
 
           <div class="form-field">
             <label for="password" class="form-field__label">비밀번호</label>
-            <input type="password" id="password" name="password" class="form-field__input"
-              placeholder="비밀번호를 입력해 주세요" autocomplete="current-password" required />
+            <div class="password-field">
+              <input type="password" id="password" name="password" class="form-field__input"
+                placeholder="비밀번호를 입력해 주세요" autocomplete="current-password" required />
+              <button type="button" class="password-toggle" aria-controls="password" aria-pressed="false">보기</button>
+            </div>
           </div>
 
           <button type="submit" class="btn btn--primary">로그인</button>
@@ -45,5 +48,22 @@
         <p>SM TOWN 팀 | 대학 팀 프로젝트</p>
       </footer>
     </div>
+
+    <script>
+      document.querySelectorAll(".password-toggle").forEach((btn) => {
+        const input = document.getElementById(btn.getAttribute("aria-controls"));
+        btn.addEventListener("click", () => {
+          const show = input.type === "password";
+          input.type = show ? "text" : "password";
+          btn.textContent = show ? "숨기기" : "보기";
+          btn.setAttribute("aria-pressed", String(show));
+        });
+      });
+
+      document.querySelector(".auth__box").addEventListener("submit", (e) => {
+        e.preventDefault();
+        location.href = "mypage.html";
+      });
+    </script>
   </body>
 </html>
