@@ -1,8 +1,295 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>친구 찾기 | SM TOWN</title><link rel="stylesheet" href="css/common.css"><link rel="stylesheet" href="css/friend.css"></head><body><div class="page page--content"><a class="skip-link" href="#main-content">본문 바로가기</a><header class="site-header site-header--compact"><a href="index.html" class="logo">SM TOWN.</a>
-<nav class="gnb gnb--compact" aria-label="주요 메뉴"><a href="index.html" class="gnb__link">HOME</a>
-  <a href="friend.html" class="gnb__link is-active" aria-current="page">FRIEND</a>
-  <a href="group.html" class="gnb__link">GROUP</a>
-  <a href="calendar.html" class="gnb__link">CALENDAR</a>
-  <a href="mypage.html" class="gnb__link">MY PAGE</a>
-  <a href="login.html" class="profile-btn" aria-label="로그인">
-  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg></a></nav></header><main id="main-content" class="page-main page-main--padded friend-main"><span class="eyebrow">FIND YOUR FRIEND</span><h1 class="page-title">취향이 맞는 친구 찾기</h1><p class="page-desc">나와 비슷한 관심사를 가진 눈송이를 만나보세요. 마음에 드는 친구에게 관심을 표현해요.</p><div class="tabs"><a class="tab active" href="friend.html">친구 찾기</a><a class="tab" href="friends.html">내 친구 목록</a></div><div class="discovery"><div><article class="panel match-card"><div class="profile-visual"><span class="floating-label">✦ 오늘의 추천 친구</span><div class="avatar-large" aria-label="프로필 일러스트">👩🏻‍🎓</div></div><div class="card-body"><div class="name-row"><h2>꽃송이</h2><span class="pill">취향이 비슷해요!</span></div><p class="meta">경영학부 · 24학번 · ENFP</p><p class="intro">안녕하세요! 새로운 카페를 찾아다니고 전시 보러 가는 걸 좋아해요. 공강 시간에 같이 산책하거나 맛있는 디저트 먹으러 갈 친구를 찾고 있어요 ☕</p><div class="chips"><span class="chip">☕ 카페</span><span class="chip">🎨 전시</span><span class="chip">🎬 영화</span><span class="chip">🚶 산책</span></div></div></article><div class="action-row"><button class="circle-btn no" aria-label="관심 없음" title="관심 없음">✕</button><a href="friend-profile.html" class="circle-btn yes" style="display:grid;place-items:center" aria-label="친구 프로필 보기" title="친구 프로필 보기">♡</a></div><p class="action-caption">X는 패스 · 하트는 프로필 확인 (카드 전환은 JS 연동 예정)</p></div><aside class="panel side-panel"><h3>새로운 인연을 찾아요 ✨</h3><p>친구의 소개와 관심사를 살펴보고 마음이 맞는 친구를 찾아보세요.</p><div class="hint"><strong>친구 찾기 TIP</strong><p>마이페이지에서 관심사와 자기소개를 자세히 작성하면 나와 비슷한 취향의 친구를 찾기 더 쉬워요.</p><a class="view-link" href="mypage.html">내 프로필 확인 →</a></div></aside></div></main><footer class="site-footer site-footer--compact"><p>© 2026 SM TOWN. 모든 권리 보유.</p><p>SM TOWN 팀 | 대학 팀 프로젝트</p></footer></div></body></html>
+<!doctype html>
+<!-- ------- 효원 작업 부분 ------- -->
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="16팀 SM TOWN · 해인, 예은, 효원" />
+    <meta
+      name="description"
+      content="친구 찾기 · 눈송이들의 취향이 만나는 곳, SM TOWN"
+    />
+    <title>친구 찾기 | SM TOWN</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/friend.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">본문으로 바로 가기</a>
+    <div class="page page--content">
+      <header class="site-header site-header--compact">
+        <a href="index.html" class="logo">SM TOWN.</a>
+        <nav class="gnb gnb--compact" aria-label="주요 메뉴">
+          <a href="index.html" class="gnb__link">HOME</a>
+          <a href="friend.html" class="gnb__link is-active" aria-current="page"
+            >FRIEND</a
+          >
+          <a href="group.html" class="gnb__link">GROUP</a>
+          <a href="calendar.html" class="gnb__link">CALENDAR</a>
+          <a href="mypage.html" class="gnb__link">MY PAGE</a>
+          <a href="login.html" class="profile-btn" aria-label="로그인">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="8" r="4" />
+              <path d="M4 21v-2a8 8 0 0 1 16 0v2" />
+            </svg>
+          </a>
+        </nav>
+      </header>
+      <main id="main-content" class="page-main page-main--padded">
+        <header class="page-intro">
+          <div>
+            <p class="eyebrow">FIND YOUR FRIEND</p>
+            <h1>취향이 맞는 친구 찾기</h1>
+            <p class="page-description">
+              나와 비슷한 관심사를 가진 눈송이를 만나보세요. 마음에 드는 친구의
+              프로필을 확인해요.
+            </p>
+          </div>
+        </header>
+        <nav class="tabs" aria-label="친구 화면">
+          <a class="tab active" href="friend.html" aria-current="page"
+            >친구 찾기</a
+          ><a class="tab" href="friends.html">내 친구 목록</a>
+        </nav>
+        <div class="discovery">
+          <fieldset class="recommendations">
+            <legend class="sr-only">
+              추천 친구 선택. 방향키로 친구를 바꿀 수 있어요.
+            </legend>
+            <div class="recommend-tabs">
+              <input
+                class="sr-only"
+                type="radio"
+                name="recommendation"
+                id="recommend-1"
+                aria-labelledby="recommend-label-1"
+                checked
+              /><label id="recommend-label-1" for="recommend-1">꽃송이</label
+              ><input
+                class="sr-only"
+                type="radio"
+                name="recommendation"
+                id="recommend-2"
+                aria-labelledby="recommend-label-2"
+              /><label id="recommend-label-2" for="recommend-2">별송이</label
+              ><input
+                class="sr-only"
+                type="radio"
+                name="recommendation"
+                id="recommend-3"
+                aria-labelledby="recommend-label-3"
+              /><label id="recommend-label-3" for="recommend-3">달송이</label
+              ><input
+                class="sr-only"
+                type="radio"
+                name="recommendation"
+                id="recommend-4"
+                aria-labelledby="recommend-label-4"
+              /><label id="recommend-label-4" for="recommend-4">봄송이</label>
+            </div>
+            <div class="recommend-cards">
+              <article
+                class="panel match-card recommendation-card"
+                data-card="1"
+                aria-labelledby="recommend-name-1"
+              >
+                <div class="profile-visual">
+                  <span class="floating-label">오늘의 추천 친구 · 1 / 4</span
+                  ><img
+                    class="avatar-large avatar--flower"
+                    src="images/profile/snow-avatar.svg"
+                    alt="꽃송이의 눈송이 프로필 일러스트"
+                    width="120"
+                    height="140"
+                  />
+                </div>
+                <div class="card-body">
+                  <div class="name-row">
+                    <h2 id="recommend-name-1">꽃송이</h2>
+                    <span class="tag tag--olive">ENFP</span>
+                  </div>
+                  <p class="meta">경영학부 · 24학번</p>
+                  <p class="intro">
+                    새로운 카페를 찾아다니고 전시 보러 가는 걸 좋아해요. 공강
+                    시간에 같이 산책하거나 맛있는 디저트 먹으러 갈 친구를 찾고
+                    있어요.
+                  </p>
+                  <div class="tags">
+                    <span class="tag">카페</span><span class="tag">전시</span
+                    ><span class="tag">영화</span><span class="tag">산책</span>
+                  </div>
+                  <div class="action-row">
+                    <label class="circle-btn no" for="recommend-2"
+                      ><span aria-hidden="true">✕</span
+                      ><span class="sr-only">다음 추천 친구 보기</span></label
+                    ><a
+                      class="circle-btn yes"
+                      href="friend-profile.html#flower"
+                      aria-label="꽃송이 프로필 보기"
+                      >♡</a
+                    >
+                  </div>
+                  <p class="action-caption">✕ 다음 친구 · ♡ 프로필 보기</p>
+                </div>
+              </article>
+              <article
+                class="panel match-card recommendation-card"
+                data-card="2"
+                aria-labelledby="recommend-name-2"
+              >
+                <div class="profile-visual">
+                  <span class="floating-label">오늘의 추천 친구 · 2 / 4</span
+                  ><img
+                    class="avatar-large avatar--star"
+                    src="images/profile/snow-avatar.svg"
+                    alt="별송이의 눈송이 프로필 일러스트"
+                    width="120"
+                    height="140"
+                  />
+                </div>
+                <div class="card-body">
+                  <div class="name-row">
+                    <h2 id="recommend-name-2">별송이</h2>
+                    <span class="tag tag--olive">ISFP</span>
+                  </div>
+                  <p class="meta">미디어학부 · 23학번</p>
+                  <p class="intro">
+                    좋아하는 영화의 장면과 음악 이야기를 나누고 싶어요. 수업이
+                    끝난 오후에 함께 책을 읽거나 조용한 카페를 찾아가요.
+                  </p>
+                  <div class="tags">
+                    <span class="tag">영화</span><span class="tag">음악</span
+                    ><span class="tag">독서</span>
+                  </div>
+                  <div class="action-row">
+                    <label class="circle-btn no" for="recommend-3"
+                      ><span aria-hidden="true">✕</span
+                      ><span class="sr-only">다음 추천 친구 보기</span></label
+                    ><a
+                      class="circle-btn yes"
+                      href="friend-profile.html#star"
+                      aria-label="별송이 프로필 보기"
+                      >♡</a
+                    >
+                  </div>
+                  <p class="action-caption">✕ 다음 친구 · ♡ 프로필 보기</p>
+                </div>
+              </article>
+              <article
+                class="panel match-card recommendation-card"
+                data-card="3"
+                aria-labelledby="recommend-name-3"
+              >
+                <div class="profile-visual">
+                  <span class="floating-label">오늘의 추천 친구 · 3 / 4</span
+                  ><img
+                    class="avatar-large avatar--moon"
+                    src="images/profile/snow-avatar.svg"
+                    alt="달송이의 눈송이 프로필 일러스트"
+                    width="120"
+                    height="140"
+                  />
+                </div>
+                <div class="card-body">
+                  <div class="name-row">
+                    <h2 id="recommend-name-3">달송이</h2>
+                    <span class="tag tag--olive">INFJ</span>
+                  </div>
+                  <p class="meta">시각영상디자인과 · 24학번</p>
+                  <p class="intro">
+                    걷다가 발견한 작은 풍경을 사진으로 남기는 걸 좋아해요. 서로
+                    다른 시선으로 동네를 구경하고 전시 감상도 나눠요.
+                  </p>
+                  <div class="tags">
+                    <span class="tag">사진</span><span class="tag">산책</span
+                    ><span class="tag">전시</span>
+                  </div>
+                  <div class="action-row">
+                    <label class="circle-btn no" for="recommend-4"
+                      ><span aria-hidden="true">✕</span
+                      ><span class="sr-only">다음 추천 친구 보기</span></label
+                    ><a
+                      class="circle-btn yes"
+                      href="friend-profile.html#moon"
+                      aria-label="달송이 프로필 보기"
+                      >♡</a
+                    >
+                  </div>
+                  <p class="action-caption">✕ 다음 친구 · ♡ 프로필 보기</p>
+                </div>
+              </article>
+              <article
+                class="panel match-card recommendation-card"
+                data-card="4"
+                aria-labelledby="recommend-name-4"
+              >
+                <div class="profile-visual">
+                  <span class="floating-label">오늘의 추천 친구 · 4 / 4</span
+                  ><img
+                    class="avatar-large avatar--spring"
+                    src="images/profile/snow-avatar.svg"
+                    alt="봄송이의 눈송이 프로필 일러스트"
+                    width="120"
+                    height="140"
+                  />
+                </div>
+                <div class="card-body">
+                  <div class="name-row">
+                    <h2 id="recommend-name-4">봄송이</h2>
+                    <span class="tag tag--olive">ESFJ</span>
+                  </div>
+                  <p class="meta">소프트웨어학부 · 25학번</p>
+                  <p class="intro">
+                    새로운 친구들과 보드게임하고 맛있는 간식을 나누는 시간을
+                    좋아해요. 도서관에서 같이 공부하고 쉬는 시간에는 가볍게
+                    산책해요.
+                  </p>
+                  <div class="tags">
+                    <span class="tag">독서</span
+                    ><span class="tag">보드게임</span
+                    ><span class="tag">카페</span>
+                  </div>
+                  <div class="action-row">
+                    <label class="circle-btn no" for="recommend-1"
+                      ><span aria-hidden="true">✕</span
+                      ><span class="sr-only">다음 추천 친구 보기</span></label
+                    ><a
+                      class="circle-btn yes"
+                      href="friend-profile.html#spring"
+                      aria-label="봄송이 프로필 보기"
+                      >♡</a
+                    >
+                  </div>
+                  <p class="action-caption">✕ 다음 친구 · ♡ 프로필 보기</p>
+                </div>
+              </article>
+            </div>
+          </fieldset>
+          <aside class="panel side-panel">
+            <h2>새로운 인연을 찾아요</h2>
+            <p>
+              친구의 소개와 관심사를 살펴보고 마음이 맞는 친구를 찾아보세요.
+            </p>
+            <div class="hint">
+              <h3>친구 찾기 TIP</h3>
+              <p>
+                마이페이지에서 관심사와 자기소개를 채우면 나를 더 잘 소개할 수
+                있어요.
+              </p>
+              <a class="text-link" href="profile-edit.html"
+                >내 프로필 소개하기 →</a
+              >
+            </div>
+            <p class="keyboard-hint">
+              추천 친구 이름을 선택하거나 키보드 방향키로 카드를 바꿔 보세요.
+            </p>
+          </aside>
+        </div>
+      </main>
+      <footer class="site-footer site-footer--compact">
+        <p>© 2026 SM TOWN. 모든 권리 보유.</p>
+        <p>SM TOWN 팀 | 대학 팀 프로젝트</p>
+      </footer>
+    </div>
+  </body>
+</html>
+<!-- --------------------- -->

@@ -1,5 +1,312 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>친구 프로필 | SM TOWN</title><link rel="stylesheet" href="css/common.css"><link rel="stylesheet" href="css/profile.css"><link rel="stylesheet" href="css/friend.css"></head><body><div class="page page--content"><a class="skip-link" href="#main-content">본문 바로가기</a><header class="site-header site-header--compact"><a href="index.html" class="logo">SM TOWN.</a>
-<nav class="gnb gnb--compact" aria-label="주요 메뉴"><a href="index.html" class="gnb__link">HOME</a><a href="friend.html" class="gnb__link is-active" aria-current="page">FRIEND</a><a href="group.html" class="gnb__link">GROUP</a><a href="calendar.html" class="gnb__link">CALENDAR</a><a href="mypage.html" class="gnb__link">MY PAGE</a><a href="login.html" class="profile-btn" aria-label="로그인"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+<!doctype html>
+<!-- ------- 효원 작업 부분 ------- -->
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="16팀 SM TOWN · 해인, 예은, 효원" />
+    <meta
+      name="description"
+      content="친구 프로필 · 눈송이들의 취향이 만나는 곳, SM TOWN"
+    />
+    <title>친구 프로필 | SM TOWN</title>
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/profile.css" />
+    <link rel="stylesheet" href="css/friend.css" />
+  </head>
+  <body>
+    <a class="skip-link state-skip state-skip--default" href="#flower"
+      >본문으로 바로 가기</a
+    >
+    <a class="skip-link state-skip" href="#star">본문으로 바로 가기</a>
+    <a class="skip-link state-skip" href="#moon">본문으로 바로 가기</a>
+    <a class="skip-link state-skip" href="#spring">본문으로 바로 가기</a>
+    <div class="page page--content">
+      <header class="site-header site-header--compact">
+        <a href="index.html" class="logo">SM TOWN.</a>
+        <nav class="gnb gnb--compact" aria-label="주요 메뉴">
+          <a href="index.html" class="gnb__link">HOME</a>
+          <a href="friend.html" class="gnb__link is-active" aria-current="page"
+            >FRIEND</a
+          >
+          <a href="group.html" class="gnb__link">GROUP</a>
+          <a href="calendar.html" class="gnb__link">CALENDAR</a>
+          <a href="mypage.html" class="gnb__link">MY PAGE</a>
+          <a href="login.html" class="profile-btn" aria-label="로그인">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
               <circle cx="12" cy="8" r="4" />
               <path d="M4 21v-2a8 8 0 0 1 16 0v2" />
-            </svg></a></nav></header><main id="main-content" class="page-main page-main--padded friend-main"><span class="eyebrow">FRIEND PROFILE</span><h1 class="page-title">친구 프로필</h1><p class="page-desc">어떤 취향을 가진 친구인지 조금 더 알아봐요.</p><div class="profile-stack"><section class="panel profile-summary" aria-labelledby="friend-name"><img class="profile-photo" src="images/profile/snow-avatar.svg" alt="친구 프로필 기본 일러스트" width="120" height="140"><div class="profile-summary__body"><div class="profile-name"><h2 id="friend-name">꽃송이</h2><span class="tag tag--olive">ENFP</span></div><p class="muted">경영학부 · 24학번 · 숙명여자대학교</p><p class="profile-bio">새로운 사람들과 이야기 나누는 걸 좋아해요.<br>공강 시간에 카페에 가거나 산책할 친구를 찾고 있어요.</p></div><a class="btn btn--sm" href="friends.html">← 친구 목록</a></section><div class="profile-columns"><section class="panel interest-panel"><h2 class="panel-title">관심사</h2><div class="tags"><span class="tag">카페</span><span class="tag">전시</span><span class="tag">영화</span><span class="tag">산책</span></div><p class="muted">비슷한 취향을 함께 나눠요.</p></section><section class="panel"><h2 class="panel-title">요즘 좋아하는 노래</h2><div class="music"><span class="music__cover">♫</span><div><strong>Love wins all</strong><p class="muted">아이유</p></div></div><p class="muted">산책하며 듣기 좋아요.</p></section></div><section class="panel"><h2 class="panel-title">친구의 한마디</h2><p class="profile-bio">같이 소소한 일상을 즐길 친구를 기다리고 있어요!</p></section></div></main><footer class="site-footer site-footer--compact"><p>© 2026 SM TOWN. 모든 권리 보유.</p><p>SM TOWN 팀 | 대학 팀 프로젝트</p></footer></div></body></html>
+            </svg>
+          </a>
+        </nav>
+      </header>
+      <main id="main-content" class="page-main page-main--padded">
+        <header class="page-intro">
+          <div>
+            <p class="eyebrow">FRIEND PROFILE</p>
+            <h1>친구 프로필</h1>
+            <p class="page-description">
+              어떤 취향을 가진 친구인지 조금 더 알아봐요.
+            </p>
+          </div>
+        </header>
+        <div class="friend-profiles">
+          <article
+            class="friend-profile-view friend-profile-view--default"
+            id="flower"
+            tabindex="-1"
+            aria-labelledby="name-flower"
+          >
+            <div class="profile-stack">
+              <section class="panel profile-summary">
+                <img
+                  class="profile-photo avatar--flower"
+                  src="images/profile/snow-avatar.svg"
+                  alt="꽃송이의 눈송이 프로필 일러스트"
+                  width="120"
+                  height="140"
+                />
+                <div class="profile-summary__body">
+                  <div class="profile-name">
+                    <h2 id="name-flower">꽃송이</h2>
+                    <span class="tag tag--olive">ENFP</span>
+                  </div>
+                  <p class="muted">경영학부 · 24학번 · 숙명여자대학교</p>
+                  <p class="profile-bio">
+                    새로운 카페를 찾아다니고 전시 보러 가는 걸 좋아해요. 공강
+                    시간에 같이 산책하거나 맛있는 디저트 먹으러 갈 친구를 찾고
+                    있어요.
+                  </p>
+                </div>
+                <a class="btn btn--sm" href="friends.html">← 친구 목록</a>
+              </section>
+              <div class="profile-columns">
+                <section class="panel interest-panel">
+                  <h3 class="panel-title">관심사</h3>
+                  <div class="tags">
+                    <span class="tag">카페</span><span class="tag">전시</span
+                    ><span class="tag">영화</span><span class="tag">산책</span>
+                  </div>
+                  <p class="muted">비슷한 취향을 함께 나눠요.</p>
+                </section>
+                <section class="panel">
+                  <h3 class="panel-title">요즘 좋아하는 노래</h3>
+                  <div class="music">
+                    <span class="music__cover" aria-hidden="true">♫</span>
+                    <div>
+                      <strong>Love wins all</strong>
+                      <p class="muted">아이유</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <section class="panel">
+                <div class="panel-heading">
+                  <h3>함께 만날 시간 찾기</h3>
+                  <a class="text-link" href="timetable.html#with-flower"
+                    >공강 비교하기 →</a
+                  >
+                </div>
+                <p class="muted">
+                  내 시간표와 꽃송이의 만남 가능한 시간을 나란히 비교해요.
+                </p>
+              </section>
+            </div>
+          </article>
+          <article
+            class="friend-profile-view"
+            id="star"
+            tabindex="-1"
+            aria-labelledby="name-star"
+          >
+            <div class="profile-stack">
+              <section class="panel profile-summary">
+                <img
+                  class="profile-photo avatar--star"
+                  src="images/profile/snow-avatar.svg"
+                  alt="별송이의 눈송이 프로필 일러스트"
+                  width="120"
+                  height="140"
+                />
+                <div class="profile-summary__body">
+                  <div class="profile-name">
+                    <h2 id="name-star">별송이</h2>
+                    <span class="tag tag--olive">ISFP</span>
+                  </div>
+                  <p class="muted">미디어학부 · 23학번 · 숙명여자대학교</p>
+                  <p class="profile-bio">
+                    좋아하는 영화의 장면과 음악 이야기를 나누고 싶어요. 수업이
+                    끝난 오후에 함께 책을 읽거나 조용한 카페를 찾아가요.
+                  </p>
+                </div>
+                <a class="btn btn--sm" href="friends.html">← 친구 목록</a>
+              </section>
+              <div class="profile-columns">
+                <section class="panel interest-panel">
+                  <h3 class="panel-title">관심사</h3>
+                  <div class="tags">
+                    <span class="tag">영화</span><span class="tag">음악</span
+                    ><span class="tag">독서</span>
+                  </div>
+                  <p class="muted">비슷한 취향을 함께 나눠요.</p>
+                </section>
+                <section class="panel">
+                  <h3 class="panel-title">요즘 좋아하는 노래</h3>
+                  <div class="music">
+                    <span class="music__cover" aria-hidden="true">♫</span>
+                    <div>
+                      <strong>한 페이지가 될 수 있게</strong>
+                      <p class="muted">DAY6</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <section class="panel">
+                <div class="panel-heading">
+                  <h3>함께 만날 시간 찾기</h3>
+                  <a class="text-link" href="timetable.html#with-star"
+                    >공강 비교하기 →</a
+                  >
+                </div>
+                <p class="muted">
+                  내 시간표와 별송이의 만남 가능한 시간을 나란히 비교해요.
+                </p>
+              </section>
+            </div>
+          </article>
+          <article
+            class="friend-profile-view"
+            id="moon"
+            tabindex="-1"
+            aria-labelledby="name-moon"
+          >
+            <div class="profile-stack">
+              <section class="panel profile-summary">
+                <img
+                  class="profile-photo avatar--moon"
+                  src="images/profile/snow-avatar.svg"
+                  alt="달송이의 눈송이 프로필 일러스트"
+                  width="120"
+                  height="140"
+                />
+                <div class="profile-summary__body">
+                  <div class="profile-name">
+                    <h2 id="name-moon">달송이</h2>
+                    <span class="tag tag--olive">INFJ</span>
+                  </div>
+                  <p class="muted">
+                    시각영상디자인과 · 24학번 · 숙명여자대학교
+                  </p>
+                  <p class="profile-bio">
+                    걷다가 발견한 작은 풍경을 사진으로 남기는 걸 좋아해요. 서로
+                    다른 시선으로 동네를 구경하고 전시 감상도 나눠요.
+                  </p>
+                </div>
+                <a class="btn btn--sm" href="friends.html">← 친구 목록</a>
+              </section>
+              <div class="profile-columns">
+                <section class="panel interest-panel">
+                  <h3 class="panel-title">관심사</h3>
+                  <div class="tags">
+                    <span class="tag">사진</span><span class="tag">산책</span
+                    ><span class="tag">전시</span>
+                  </div>
+                  <p class="muted">비슷한 취향을 함께 나눠요.</p>
+                </section>
+                <section class="panel">
+                  <h3 class="panel-title">요즘 좋아하는 노래</h3>
+                  <div class="music">
+                    <span class="music__cover" aria-hidden="true">♫</span>
+                    <div>
+                      <strong>사건의 지평선</strong>
+                      <p class="muted">윤하</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <section class="panel">
+                <div class="panel-heading">
+                  <h3>함께 만날 시간 찾기</h3>
+                  <a class="text-link" href="timetable.html#with-moon"
+                    >공강 비교하기 →</a
+                  >
+                </div>
+                <p class="muted">
+                  내 시간표와 달송이의 만남 가능한 시간을 나란히 비교해요.
+                </p>
+              </section>
+            </div>
+          </article>
+          <article
+            class="friend-profile-view"
+            id="spring"
+            tabindex="-1"
+            aria-labelledby="name-spring"
+          >
+            <div class="profile-stack">
+              <section class="panel profile-summary">
+                <img
+                  class="profile-photo avatar--spring"
+                  src="images/profile/snow-avatar.svg"
+                  alt="봄송이의 눈송이 프로필 일러스트"
+                  width="120"
+                  height="140"
+                />
+                <div class="profile-summary__body">
+                  <div class="profile-name">
+                    <h2 id="name-spring">봄송이</h2>
+                    <span class="tag tag--olive">ESFJ</span>
+                  </div>
+                  <p class="muted">소프트웨어학부 · 25학번 · 숙명여자대학교</p>
+                  <p class="profile-bio">
+                    새로운 친구들과 보드게임하고 맛있는 간식을 나누는 시간을
+                    좋아해요. 도서관에서 같이 공부하고 쉬는 시간에는 가볍게
+                    산책해요.
+                  </p>
+                </div>
+                <a class="btn btn--sm" href="friends.html">← 친구 목록</a>
+              </section>
+              <div class="profile-columns">
+                <section class="panel interest-panel">
+                  <h3 class="panel-title">관심사</h3>
+                  <div class="tags">
+                    <span class="tag">독서</span
+                    ><span class="tag">보드게임</span
+                    ><span class="tag">카페</span>
+                  </div>
+                  <p class="muted">비슷한 취향을 함께 나눠요.</p>
+                </section>
+                <section class="panel">
+                  <h3 class="panel-title">요즘 좋아하는 노래</h3>
+                  <div class="music">
+                    <span class="music__cover" aria-hidden="true">♫</span>
+                    <div>
+                      <strong>청춘</strong>
+                      <p class="muted">잔나비</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <section class="panel">
+                <div class="panel-heading">
+                  <h3>함께 만날 시간 찾기</h3>
+                  <a class="text-link" href="timetable.html#with-spring"
+                    >공강 비교하기 →</a
+                  >
+                </div>
+                <p class="muted">
+                  내 시간표와 봄송이의 만남 가능한 시간을 나란히 비교해요.
+                </p>
+              </section>
+            </div>
+          </article>
+        </div>
+      </main>
+      <footer class="site-footer site-footer--compact">
+        <p>© 2026 SM TOWN. 모든 권리 보유.</p>
+        <p>SM TOWN 팀 | 대학 팀 프로젝트</p>
+      </footer>
+    </div>
+  </body>
+</html>
+<!-- --------------------- -->

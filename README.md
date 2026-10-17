@@ -2,7 +2,7 @@
 
 > 눈송이들의 취향이 만나는 곳
 
-웹프로그래밍 1분반 팀 프로젝트입니다.
+웹프로그래밍 1분반 **16팀 SM TOWN** 프로젝트입니다.
 취향이 맞는 친구와 소모임을 찾고, 함께한 만남을 기록하는 대학생 소셜 플랫폼을 HTML과 CSS로 만듭니다.
 
 **🔗 사이트 바로가기: <https://jye1225.github.io/sw-town/index.html>**
@@ -16,7 +16,7 @@
 | 친구 찾기 · 목록 · 프로필 | [friend.html](https://jye1225.github.io/sw-town/friend.html) · [friends.html](https://jye1225.github.io/sw-town/friends.html) · [friend-profile.html](https://jye1225.github.io/sw-town/friend-profile.html) | 효원 |
 | 소모임 목록 · 상세 | [group.html](https://jye1225.github.io/sw-town/group.html) · [group-detail.html](https://jye1225.github.io/sw-town/group-detail.html) | 예은 |
 | 만남 기록 캘린더 | [calendar.html](https://jye1225.github.io/sw-town/calendar.html) | 해인 |
-| 마이페이지 · 프로필 수정 · 시간표 | [mypage.html](https://jye1225.github.io/sw-town/mypage.html) · [profile-edit.html](https://jye1225.github.io/sw-town/profile-edit.html) · [timetable.html](https://jye1225.github.io/sw-town/timetable.html) | 예은 · 효원 |
+| 마이페이지 · 프로필 수정 · 공강 비교 | [mypage.html](https://jye1225.github.io/sw-town/mypage.html) · [profile-edit.html](https://jye1225.github.io/sw-town/profile-edit.html) · [timetable.html](https://jye1225.github.io/sw-town/timetable.html) | 예은 · 효원 |
 
 화면별 연결 관계와 CSS 파일은 [사이트맵](docs/sitemap.md)에 정리되어 있습니다.
 
@@ -59,7 +59,7 @@ sw-town/
 ├── calendar.html           # 만남 기록 캘린더
 ├── mypage.html             # 마이페이지
 ├── profile-edit.html       # 프로필 수정
-├── timetable.html          # 내 주간 시간표
+├── timetable.html          # 친구와 공강 맞추기
 ├── css/
 │   ├── common.css          # 공통 변수, 헤더, 푸터, 버튼 등
 │   ├── index.css           # 홈
@@ -116,3 +116,11 @@ push한 뒤 GitHub에서 **Compare & pull request**를 눌러 PR을 만듭니다
 
 - [기획](docs/planning.md): 프로젝트 소개, 팀 구성, 디자인 규칙, 개발 범위
 - [사이트맵](docs/sitemap.md): 화면 목록, 화면 간 이동, CSS 연결
+
+## 통합 보완 및 제출 준비
+
+- 친구 추천 카드, 친구별 프로필·공강 비교, 9~11월 캘린더 월/날짜 선택은 HTML/CSS로 전환합니다.
+- 공통 시간표와 범례는 `common.css`에서 관리합니다. 폰트는 `fonts/`에서 상대 경로로 불러옵니다.
+- 소모임 참여 안내와 프로필 입력 확인은 서버 저장 없이 화면 내에서 확인하는 흐름입니다.
+- 로그인·회원가입의 기존 JavaScript는 팀 요청에 따라 유지했습니다.
+- 제출 파일명 변환, JPEG 이미지 변환 및 ZIP 생성 방법은 [제출 준비](docs/submission.md)를 참고하세요.

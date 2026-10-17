@@ -49,11 +49,16 @@
 }
 
 /* 라디오 버튼 선택에 따라 해당 카테고리 카드만 표시합니다. */
-.group-browser:has(#category-sports:checked) .group-card:not([data-category="sports"]),
-.group-browser:has(#category-reading:checked) .group-card:not([data-category="reading"]),
-.group-browser:has(#category-cafe:checked) .group-card:not([data-category="cafe"]),
-.group-browser:has(#category-culture:checked) .group-card:not([data-category="culture"]),
-.group-browser:has(#category-walk:checked) .group-card:not([data-category="walk"]) {
+.group-browser:has(#category-sports:checked)
+  .group-card:not([data-category="sports"]),
+.group-browser:has(#category-reading:checked)
+  .group-card:not([data-category="reading"]),
+.group-browser:has(#category-cafe:checked)
+  .group-card:not([data-category="cafe"]),
+.group-browser:has(#category-culture:checked)
+  .group-card:not([data-category="culture"]),
+.group-browser:has(#category-walk:checked)
+  .group-card:not([data-category="walk"]) {
   display: none;
 }
 
@@ -65,7 +70,9 @@
   border: 1px solid var(--color-border);
   border-radius: 12px;
   background: var(--color-surface);
-  transition: border-color 0.2s, transform 0.2s;
+  transition:
+    border-color 0.2s,
+    transform 0.2s;
 }
 
 .group-card:hover {
@@ -333,13 +340,6 @@ body:has(#walk:target) .detail-skip--walk {
   width: 100%;
 }
 
-.join-note {
-  margin-top: 10px;
-  color: var(--color-muted);
-  font-size: 11px;
-  text-align: center;
-}
-
 .meeting-guide {
   padding: 20px;
   border: 1px solid var(--color-border);
@@ -412,5 +412,24 @@ body:has(#walk:target) .detail-skip--walk {
   .member-list {
     gap: 14px;
   }
+}
+
+.join-details summary {
+  list-style: none;
+}
+.join-details summary::-webkit-details-marker {
+  display: none;
+}
+.join-details__body {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+  font-size: 13px;
+  line-height: 1.8;
+}
+.join-details__body h3 {
+  font-size: 15px;
 }
 /* --------------------- */
