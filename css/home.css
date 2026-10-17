@@ -1,6 +1,0 @@
-/* index.html 전용 스타일 */
-.page-list ul {
-  display: grid;
-  gap: 12px;
-  padding-left: 24px;
-}

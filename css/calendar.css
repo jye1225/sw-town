@@ -96,10 +96,6 @@
   color: var(--color-text-sub);
 }
 
-.calendar-info__note {
-  font-size: 13px;
-}
-
 /* 선택한 날짜 상세 */
 .record-detail {
   display: flex;
@@ -156,6 +152,7 @@
 .record__memo {
   font-size: 16px;
 }
+
 /* 반응형 */
 @media (max-width: 1000px) {
   .day {
@@ -197,6 +194,7 @@
 
   .calendar-info {
     flex-direction: column;
+    font-size: 13px;
     gap: 4px;
   }
 
