@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" fill="none">
+  <title>좋아하는 문장을 나누는 날</title>
+  <path fill="#e5dacc" d="M0 0h600v360H0z" />
+  <circle cx="485" cy="45" r="150" fill="#fffdf9" opacity=".3" />
+  <circle cx="65" cy="350" r="110" fill="#fffdf9" opacity=".25" />
+  <path d="M70 310h460" stroke="#3e4d3c" stroke-opacity=".15" stroke-width="2" />
+  <rect x="140" y="264" width="322" height="32" rx="8" fill="#a4ac87" />
+  <rect x="160" y="227" width="283" height="34" rx="6" fill="#eaddbd" stroke="#9a8569" stroke-width="2" />
+  <path d="M300 100c-44-24-105-22-146-8v126c42-15 102-15 146 10 44-25 104-25 146-10V92c-41-14-102-16-146 8Z" fill="#fffaf0" stroke="#9a8569" stroke-width="3" />
+  <path d="M300 102v123M175 117c33-6 62-3 98 10M175 141c33-6 62-3 98 10M175 165c33-6 62-3 98 10M325 126c33-12 64-14 95-8M325 150c33-12 64-14 95-8M325 174c33-12 64-14 95-8" stroke="#beb39d" stroke-width="3" stroke-linecap="round" />
+  <path d="M350 86v67l16-12 16 12V82" fill="#a7ad87" />
+</svg>

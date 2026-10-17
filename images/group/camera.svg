@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" fill="none">
+  <title>같은 순간, 다른 시선</title>
+  <path fill="#d9ded5" d="M0 0h600v360H0z" />
+  <circle cx="485" cy="45" r="150" fill="#fffdf9" opacity=".3" />
+  <circle cx="65" cy="350" r="110" fill="#fffdf9" opacity=".25" />
+  <path d="M70 310h460" stroke="#3e4d3c" stroke-opacity=".15" stroke-width="2" />
+  <path d="M224 103c-11-39 121-53 142 0" stroke="#877b69" stroke-width="8" />
+  <rect x="144" y="111" width="312" height="163" rx="20" fill="#faf5e9" stroke="#8c927b" stroke-width="3" />
+  <path d="M144 154h312v72H144Z" fill="#9eaa8c" />
+  <path d="m239 111 15-26h90l15 26" fill="#8c927b" />
+  <circle cx="301" cy="193" r="65" fill="#536452" />
+  <circle cx="301" cy="193" r="48" fill="#c4cfb5" stroke="#faf5e9" stroke-width="3" />
+  <circle cx="301" cy="193" r="28" fill="#788e78" />
+  <circle cx="289" cy="180" r="11" fill="#e5ecdf" />
+  <rect x="385" y="127" width="41" height="18" rx="4" fill="#c5b59b" />
+  <circle cx="177" cy="130" r="6" fill="#b78b6d" />
+</svg>

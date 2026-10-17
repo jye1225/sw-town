@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" fill="none">
+  <title>커피 한 잔의 여유</title>
+  <path fill="#e7d5c1" d="M0 0h600v360H0z" />
+  <circle cx="485" cy="45" r="150" fill="#fffdf9" opacity=".3" />
+  <circle cx="65" cy="350" r="110" fill="#fffdf9" opacity=".25" />
+  <path d="M70 310h460" stroke="#3e4d3c" stroke-opacity=".15" stroke-width="2" />
+  <ellipse cx="291" cy="278" rx="139" ry="20" fill="#c2af94" />
+  <path d="M378 139h20a42 42 0 0 1 0 84h-30" stroke="#8d9b78" stroke-width="17" />
+  <path d="M182 128h199l-12 99c-5 31-26 48-57 48h-61c-32 0-53-17-58-48Z" fill="#9da986" />
+  <ellipse cx="281" cy="129" rx="99" ry="24" fill="#fff8eb" />
+  <ellipse cx="281" cy="134" rx="80" ry="15" fill="#946644" />
+  <path d="M249 90c-22-20 20-25 0-48M289 90c-22-20 20-25 0-48M329 90c-22-20 20-25 0-48" stroke="#fffaf0" stroke-width="4" stroke-linecap="round" />
+  <path d="M452 242c16-49 31-39 31-39-3 25-20 40-31 39Z" fill="#81906a" />
+</svg>
