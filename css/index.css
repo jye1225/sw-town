@@ -3,7 +3,6 @@
    Index: 메인 페이지
    ========================================= */
 .home {
-  word-break: keep-all;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -22,8 +21,7 @@
 }
 
 .hero__title {
-  font-size: clamp(28px, 4vw, 42px);
-  line-height: 1.35;
+  font-size: 42px;
   font-weight: 700;
 }
 
@@ -121,33 +119,5 @@
 
 .guide__link:hover {
   text-decoration: underline;
-}
-/* ---------- 반응형 ---------- */
-@media (max-width: 760px) {
-  .home {
-    gap: 32px;
-    padding-block: 40px 56px;
-  }
-
-  .feature-list {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .feature-card {
-    height: 220px;
-  }
-
-  .feature-card__body {
-    padding: 20px;
-  }
-
-  .feature-card__title {
-    font-size: 20px;
-  }
-
-  .feature-card__desc {
-    font-size: 14px;
-  }
 }
 /* --------------------- */
