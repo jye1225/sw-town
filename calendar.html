@@ -1,20 +1,139 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SW Town | 캘린더</title>
-    <link rel="stylesheet" href="css/reset.css" />
+    <title>만남 기록 캘린더 | SM TOWN</title>
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/calendar.css" />
   </head>
   <body>
-    <header class="site-header"><a class="site-logo" href="index.html">SW Town</a></header>
-    <main class="container">
-      <h1>캘린더</h1>
-      <!-- TODO: 캘린더 화면의 HTML과 CSS를 작성합니다. -->
-      <p>화면 준비 중입니다.</p>
-    </main>
-    <footer class="site-footer"><a href="index.html">홈으로</a></footer>
+    <div class="page">
+      <header class="site-header">
+        <a href="index.html" class="logo">SM TOWN.</a>
+        <nav class="gnb" aria-label="주요 메뉴">
+          <a href="index.html" class="gnb__link">HOME</a>
+          <a href="#" class="gnb__link">FRIEND</a>
+          <a href="#" class="gnb__link">GROUP</a>
+          <a href="calendar.html" class="gnb__link is-active" aria-current="page">CALENDAR</a>
+          <a href="#" class="gnb__link">MY PAGE</a>
+          <a href="login.html" class="profile-btn" aria-label="내 프로필">
+            <svg viewBox="0 0 21 21" fill="none" aria-hidden="true">
+              <path
+                d="M10.5 11.375a4.375 4.375 0 1 0 0-8.75 4.375 4.375 0 0 0 0 8.75Zm0 0a7 7 0 0 1 7 7m-7-7a7 7 0 0 0-7 7"
+                stroke="#635936"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+          </a>
+        </nav>
+      </header>
+
+      <main class="page-main calendar-page">
+        <section class="page-head">
+          <h1 class="page-head__title">만남 기록 캘린더</h1>
+          <p class="page-head__desc">눈송이 님의 소중한 만남을 사진과 이야기로 모아두었어요.</p>
+        </section>
+
+        <div class="month-nav">
+          <button type="button" class="btn">‹ 이전 달</button>
+          <h2 class="month-nav__current">2026.10</h2>
+          <button type="button" class="btn">다음 달 ›</button>
+        </div>
+
+        <section class="calendar" aria-label="2026년 10월 달력">
+          <ol class="calendar__weekdays">
+            <li>일요일</li>
+            <li>월요일</li>
+            <li>화요일</li>
+            <li>수요일</li>
+            <li>목요일</li>
+            <li>금요일</li>
+            <li>토요일</li>
+          </ol>
+          <ol class="calendar__days">
+            <li class="day is-empty" aria-hidden="true"></li>
+            <li class="day is-empty" aria-hidden="true"></li>
+            <li class="day is-empty" aria-hidden="true"></li>
+            <li class="day is-empty" aria-hidden="true"></li>
+            <li class="day"><span>1</span></li>
+            <li class="day"><span>2</span></li>
+            <li class="day">
+              <span>3</span>
+              <img src="images/test/meeting-photo-01.png" alt="10월 3일 만남 사진" class="day__photo" />
+              <span class="day__count">기록 3개</span>
+            </li>
+            <li class="day"><span>4</span></li>
+            <li class="day"><span>5</span></li>
+            <li class="day"><span>6</span></li>
+            <li class="day"><span>7</span></li>
+            <li class="day"><span>8</span></li>
+            <li class="day"><span>9</span></li>
+            <li class="day is-selected" aria-current="date">
+              <span>10</span>
+              <img src="images/test/meeting-photo-02.png" alt="10월 10일 만남 사진" class="day__photo" />
+              <span class="day__count">기록 1개 · 선택됨</span>
+            </li>
+            <li class="day"><span>11</span></li>
+            <li class="day"><span>12</span></li>
+            <li class="day"><span>13</span></li>
+            <li class="day">
+              <span>14</span>
+              <img src="images/test/meeting-photo-03.png" alt="10월 14일 만남 사진" class="day__photo" />
+              <span class="day__count">기록 1개</span>
+            </li>
+            <li class="day">
+              <span>15</span>
+              <img src="images/test/meeting-photo-04.png" alt="10월 15일 만남 사진" class="day__photo" />
+              <span class="day__count">기록 2개</span>
+            </li>
+            <li class="day"><span>16</span></li>
+            <li class="day"><span>17</span></li>
+            <li class="day">
+              <span>18</span>
+              <img src="images/test/meeting-photo-05.png" alt="10월 18일 만남 사진" class="day__photo" />
+              <span class="day__count">기록 2개</span>
+            </li>
+            <li class="day"><span>19</span></li>
+            <li class="day"><span>20</span></li>
+            <li class="day"><span>21</span></li>
+            <li class="day"><span>22</span></li>
+            <li class="day"><span>23</span></li>
+            <li class="day"><span>24</span></li>
+            <li class="day"><span>25</span></li>
+            <li class="day"><span>26</span></li>
+            <li class="day"><span>27</span></li>
+            <li class="day"><span>28</span></li>
+            <li class="day"><span>29</span></li>
+            <li class="day"><span>30</span></li>
+            <li class="day"><span>31</span></li>
+          </ol>
+        </section>
+
+        <div class="calendar-info">
+          <p>이번 달 기록 5개 · 사진이 있는 날짜에 만남 기록이 있어요.</p>
+          <p class="calendar-info__note">월 이동과 날짜 선택은 정적인 화면 예시입니다.</p>
+        </div>
+
+        <section class="record-detail">
+          <h2 class="record-detail__date">10월 10일 (토) · 기록 1개</h2>
+          <article class="record">
+            <img src="images/test/meeting-photo-02.png" alt="10월 10일 만남 사진" class="record__photo" />
+            <div class="record__body">
+              <h3 class="record__title">카페 SNOW</h3>
+              <p class="record__meta">2026.10.10 · 오후 2시 · 카페 SNOW</p>
+              <p class="record__friend">함께한 친구 · 꽃송이</p>
+              <p class="record__memo">카페 분위기 너무 좋았다 🥰</p>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>© 2026 SM TOWN. 모든 권리 보유.</p>
+        <p>SM TOWN 팀 | 대학 팀 프로젝트</p>
+      </footer>
+    </div>
   </body>
 </html>

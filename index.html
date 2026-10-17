@@ -1,37 +1,71 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="웹프로그래밍 1분반 팀프로젝트 SW Town" />
-    <title>SW Town | 홈</title>
-    <link rel="stylesheet" href="css/reset.css" />
+    <title>SM TOWN</title>
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="site-logo" href="index.html">SW Town</a>
-    </header>
-    <main class="container">
-      <h1>SW Town</h1>
-      <p>웹프로그래밍 1분반 팀프로젝트</p>
-      <p>초기 개발 환경입니다. 중간 제출까지 HTML과 CSS로 화면을 제작합니다.</p>
-      <nav class="page-list" aria-label="전체 페이지">
-        <ul>
-          <li><a href="login.html">로그인</a></li>
-          <li><a href="signup.html">회원가입</a></li>
-          <li><a href="friend.html">친구</a></li>
-          <li><a href="friend-profile.html">친구 프로필</a></li>
-          <li><a href="friends.html">친구 목록</a></li>
-          <li><a href="group.html">그룹</a></li>
-          <li><a href="group-detail.html">그룹 상세</a></li>
-          <li><a href="mypage.html">마이페이지</a></li>
-          <li><a href="profile-edit.html">프로필 수정</a></li>
-          <li><a href="calendar.html">캘린더</a></li>
-        </ul>
-      </nav>
-    </main>
-    <footer class="site-footer"><p>SW Town · 웹프로그래밍 1분반</p></footer>
+    <div class="page">
+      <header class="site-header site-header--tall">
+        <a href="index.html" class="logo">SM TOWN.</a>
+        <nav class="gnb" aria-label="주요 메뉴">
+          <a href="index.html" class="gnb__link is-active" aria-current="page">HOME</a>
+          <a href="#" class="gnb__link">FRIEND</a>
+          <a href="#" class="gnb__link">GROUP</a>
+          <a href="calendar.html" class="gnb__link">CALENDAR</a>
+          <a href="#" class="gnb__link">MY PAGE</a>
+          <a href="login.html" class="profile-btn" aria-label="내 프로필">
+            <svg viewBox="0 0 21 21" fill="none" aria-hidden="true">
+              <path
+                d="M10.5 11.375a4.375 4.375 0 1 0 0-8.75 4.375 4.375 0 0 0 0 8.75Zm0 0a7 7 0 0 1 7 7m-7-7a7 7 0 0 0-7 7"
+                stroke="#635936"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+            </svg>
+          </a>
+        </nav>
+      </header>
+
+      <main class="page-main home">
+        <section class="hero">
+          <p class="hero__eyebrow">눈송이들의 취향이 만나는 곳</p>
+          <h1 class="hero__title">취향이 맞는 친구, 함께할 소모임을 찾아요.</h1>
+        </section>
+
+        <section class="feature-list">
+          <a href="#" class="feature-card">
+            <img src="images/test/find-friend.jpeg" alt="" class="feature-card__img" />
+            <div class="feature-card__body">
+              <h2 class="feature-card__title">친구 찾기</h2>
+              <p class="feature-card__desc">나와 비슷한 취향의 대학생을 만나요.</p>
+            </div>
+          </a>
+          <a href="#" class="feature-card">
+            <img src="images/test/find-group.jpeg" alt="" class="feature-card__img" />
+            <div class="feature-card__body">
+              <h2 class="feature-card__title">소모임 찾기</h2>
+              <p class="feature-card__desc">관심 있는 활동을 함께할 사람들을 만나요.</p>
+            </div>
+          </a>
+        </section>
+
+        <section class="guide">
+          <div class="guide__body">
+            <h2 class="guide__title">SM TOWN에는 처음인가요?</h2>
+            <p class="guide__desc">취향을 채우고, 친구와 소모임을 만나고, 함께한 순간을 기록해요.</p>
+            <a href="#" class="guide__link">이용 방법 알아보기 →</a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>© 2026 SM TOWN. 모든 권리 보유.</p>
+        <p>SM TOWN 팀 | 대학 팀 프로젝트</p>
+      </footer>
+    </div>
   </body>
 </html>

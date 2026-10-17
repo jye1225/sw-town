@@ -1,1 +1,108 @@
-/* login.html, signup.html 전용 스타일을 작성합니다. */
+/* =========================================
+   Auth: 로그인 / 회원가입
+   ========================================= */
+.auth {
+  display: flex;
+  justify-content: center;
+  padding: 56px 0;
+}
+
+.auth--login {
+  padding: 64px 0;
+}
+
+.auth__box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 440px;
+}
+
+.auth--login .auth__box {
+  gap: 24px;
+}
+
+.auth__head {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+}
+
+.auth__title {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.auth__desc {
+  font-size: 16px;
+  color: var(--color-text-sub);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field__label {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.form-field__input {
+  height: 48px;
+  padding: 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  font-size: 16px;
+}
+
+.form-field__input::placeholder {
+  color: var(--color-text-sub);
+}
+
+.form-field__input:focus {
+  outline: none;
+  border-color: var(--color-text-sub);
+}
+
+.auth__switch {
+  font-size: 15px;
+  text-align: center;
+}
+
+.auth__switch a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- 비밀번호 보기 ---------- */
+.password-field {
+  position: relative;
+}
+
+.password-field .form-field__input {
+  width: 100%;
+  padding-right: 72px;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  height: 32px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text-sub);
+  cursor: pointer;
+}
+
+.password-toggle:hover {
+  background: var(--color-bg);
+}
