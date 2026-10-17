@@ -1,24 +1,7 @@
 /* ------- 해인 작업 부분 ------- */
-@font-face {
-    font-family: 'Okticon';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408@1.0/Ownglyph_okticon-Lt.woff2') format('woff2');
-    font-weight: 300;
-    font-display: swap;
-}
 
-@font-face {
-    font-family: 'Okticon';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408@1.0/Ownglyph_okticon-Rg.woff2') format('woff2');
-    font-weight: 400;
-    font-display: swap;
-}
+/* 폰트 */
 
-@font-face {
-    font-family: 'Okticon';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408@1.0/Ownglyph_okticon-Bd.woff2') format('woff2');
-    font-weight: 700;
-    font-display: swap;
-}
 @font-face {
     font-family: 'IsYun';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff') format('woff');
@@ -26,9 +9,7 @@
     font-display: swap;
 }
 
-/* =========================================
-   Common: 전역 변수, 기본 레이아웃, 공통 UI 및 반응형 스타일
-   ========================================= */
+/* 전역 변수, 기본 레이아웃, 공통 UI 및 반응형 스타일 */
 
 :root {
   --color-bg: #edeae5;
@@ -84,7 +65,7 @@ input {
   color: inherit;
 }
 
-/* ---------- Layout ---------- */
+/* 레이아웃 */
 .page {
   display: flex;
   flex-direction: column;
@@ -99,7 +80,7 @@ input {
   flex: 1;
 }
 
-/* ---------- Header ---------- */
+/* 헤더 */
 .site-header {
   display: flex;
   justify-content: space-between;
@@ -124,7 +105,7 @@ input {
   color: var(--color-brand);
 }
 
-/* ---------- Navigation ---------- */
+/* 네비게이션 */
 .gnb {
   display: flex;
   align-items: center;
@@ -167,7 +148,7 @@ input {
   height: 21px;
 }
 
-/* ---------- Footer ---------- */
+/* 푸터 */
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -180,7 +161,7 @@ input {
   color: var(--color-text-sub);
 }
 
-/* ---------- Buttons ---------- */
+/* 버튼 */
 .btn {
   display: inline-flex;
   justify-content: center;

@@ -1,7 +1,5 @@
 /* ------- 해인 작업 부분 ------- */
-/* =========================================
-   Calendar: 만남 기록 캘린더
-   ========================================= */
+/* 캘린더 페이지 */
 .calendar-page {
   word-break: keep-all;
   display: flex;
@@ -26,7 +24,7 @@
   color: var(--color-text-sub);
 }
 
-/* ---------- 월 이동 ---------- */
+/* 월 이동 */
 .month-nav {
   display: flex;
   justify-content: space-between;
@@ -38,7 +36,7 @@
   font-weight: 700;
 }
 
-/* ---------- 달력 ---------- */
+/* 달력 */
 .calendar {
   overflow: hidden;
   border: 1px solid var(--color-border);
@@ -102,7 +100,7 @@
   font-size: 13px;
 }
 
-/* ---------- 선택한 날짜 상세 ---------- */
+/* 선택한 날짜 상세 */
 .record-detail {
   display: flex;
   flex-direction: column;
@@ -158,7 +156,7 @@
 .record__memo {
   font-size: 16px;
 }
-/* ---------- 반응형 ---------- */
+/* 반응형 */
 @media (max-width: 1000px) {
   .day {
     height: auto;

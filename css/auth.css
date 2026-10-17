@@ -1,7 +1,5 @@
 /* ------- 해인 작업 부분 ------- */
-/* =========================================
-   Auth: 로그인 / 회원가입
-   ========================================= */
+/* Auth 로그인 / 회원가입 */
 .auth {
   word-break: keep-all;
   display: flex;
@@ -80,7 +78,7 @@
   text-decoration: underline;
 }
 
-/* ---------- 비밀번호 보기 ---------- */
+/* 비밀번호 보기 */
 .password-field {
   position: relative;
 }
@@ -109,7 +107,7 @@
 .password-toggle:hover {
   background: var(--color-bg);
 }
-/* ---------- 반응형 ---------- */
+/* 반응형 */
 @media (max-width: 640px) {
   .auth,
   .auth--login {

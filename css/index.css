@@ -1,7 +1,5 @@
 /* ------- 해인 작업 부분 ------- */
-/* =========================================
-   Index: 메인 페이지
-   ========================================= */
+/* 메인 페이지 */
 .home {
   word-break: keep-all;
   display: flex;
@@ -27,7 +25,7 @@
   font-weight: 700;
 }
 
-/* ---------- 카드 ---------- */
+/* 카드 */
 .feature-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -82,7 +80,7 @@
   color: rgba(255, 255, 255, 0.85);
 }
 
-/* ---------- 안내 ---------- */
+/* 안내 */
 .guide {
   display: flex;
   gap: 16px;
@@ -122,7 +120,7 @@
 .guide__link:hover {
   text-decoration: underline;
 }
-/* ---------- 반응형 ---------- */
+/* 반응형 */
 @media (max-width: 760px) {
   .home {
     gap: 32px;
