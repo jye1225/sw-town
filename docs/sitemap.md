@@ -15,7 +15,7 @@
 | 만남 기록 캘린더 | `calendar.html` | `common.css` · `calendar.css` | 해인 |
 | 마이페이지 | `mypage.html` | `common.css` · `profile.css` | 예은 |
 | 프로필 수정 | `profile-edit.html` | `common.css` · `profile.css` | 예은 |
-| 내 주간 시간표 | `timetable.html` | `common.css` · `profile.css` · `friend.css` | 효원 |
+| 친구와 공강 맞추기 | `timetable.html` | `common.css` · `friend.css` | 효원 |
 
 ## 화면 구조
 
@@ -68,3 +68,10 @@
 
 소모임 상세는 한 페이지에 모든 모임이 들어 있습니다.
 주소 뒤의 `#baseball`, `#reading`, `#cafe`, `#exhibition`, `#photo`, `#walk`에 따라 해당 모임만 보여 줍니다.
+
+## HTML/CSS로 전환하는 상세 화면
+
+- 친구 프로필: `#flower`, `#star`, `#moon`, `#spring`
+- 공강 비교: `#with-flower`, `#with-star`, `#with-moon`, `#with-spring`
+- 캘린더: `#month-09`, `#month-10`, `#month-11` 및 `#record-1010` 등 날짜별 기록
+- 프로필 입력 확인: `profile-edit.html#profile-review`

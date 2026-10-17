@@ -1,25 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <!-- ------- 해인 작업 부분 ------- -->
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="16팀 SM TOWN · 해인, 예은, 효원" />
+    <meta
+      name="description"
+      content="만남 기록 캘린더 · 눈송이들의 취향이 만나는 곳, SM TOWN"
+    />
     <title>만남 기록 캘린더 | SM TOWN</title>
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/calendar.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main-content">본문으로 바로 가기</a>
+    <a class="skip-link state-skip" href="#month-09">본문으로 바로 가기</a>
+    <a class="skip-link state-skip state-skip--default" href="#month-10"
+      >본문으로 바로 가기</a
+    >
+    <a class="skip-link state-skip" href="#month-11">본문으로 바로 가기</a>
+    <a class="skip-link state-skip" href="#record-0918">본문으로 바로 가기</a>
+    <a class="skip-link state-skip" href="#record-0925">본문으로 바로 가기</a>
+    <a class="skip-link state-skip" href="#record-1003">본문으로 바로 가기</a>
+    <a class="skip-link state-skip" href="#record-1010">본문으로 바로 가기</a>
+    <a class="skip-link state-skip" href="#record-1014">본문으로 바로 가기</a>
+    <a class="skip-link state-skip" href="#record-1015">본문으로 바로 가기</a>
+    <a class="skip-link state-skip" href="#record-1018">본문으로 바로 가기</a>
+    <a class="skip-link state-skip" href="#record-1106">본문으로 바로 가기</a>
+    <a class="skip-link state-skip" href="#record-1113">본문으로 바로 가기</a>
     <div class="page page--content">
       <header class="site-header site-header--compact">
         <a href="index.html" class="logo">SM TOWN.</a>
-
-        <!-- ------- 예은 작업 부분: GROUP / MY PAGE 메뉴 링크 연결 ------- -->
         <nav class="gnb gnb--compact" aria-label="주요 메뉴">
           <a href="index.html" class="gnb__link">HOME</a>
           <a href="friend.html" class="gnb__link">FRIEND</a>
           <a href="group.html" class="gnb__link">GROUP</a>
-          <a href="calendar.html" class="gnb__link is-active" aria-current="page">CALENDAR</a>
+          <a
+            href="calendar.html"
+            class="gnb__link is-active"
+            aria-current="page"
+            >CALENDAR</a
+          >
           <a href="mypage.html" class="gnb__link">MY PAGE</a>
           <a href="login.html" class="profile-btn" aria-label="로그인">
             <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
@@ -28,110 +49,633 @@
             </svg>
           </a>
         </nav>
-        <!-- --------------------- -->
       </header>
-
-      <!-- ------- 해인 작업 부분: 본문 ------- -->
       <main id="main-content" class="page-main calendar-page">
-        <section class="page-head">
+        <header class="page-head">
           <h1 class="page-head__title">만남 기록 캘린더</h1>
-          <p class="page-head__desc">눈송이 님의 소중한 만남을 사진과 이야기로 모아두었어요.</p>
-        </section>
-
-        <div class="month-nav">
-          <button type="button" class="btn">‹ 이전 달</button>
-          <h2 class="month-nav__current">2026.10</h2>
-          <button type="button" class="btn">다음 달 ›</button>
-        </div>
-
-        <section class="calendar" aria-label="2026년 10월 달력">
-          <ol class="calendar__weekdays">
-            <li>일<span class="weekday-suffix">요일</span></li>
-            <li>월<span class="weekday-suffix">요일</span></li>
-            <li>화<span class="weekday-suffix">요일</span></li>
-            <li>수<span class="weekday-suffix">요일</span></li>
-            <li>목<span class="weekday-suffix">요일</span></li>
-            <li>금<span class="weekday-suffix">요일</span></li>
-            <li>토<span class="weekday-suffix">요일</span></li>
-          </ol>
-          <ol class="calendar__days">
-            <li class="day is-empty" aria-hidden="true"></li>
-            <li class="day is-empty" aria-hidden="true"></li>
-            <li class="day is-empty" aria-hidden="true"></li>
-            <li class="day is-empty" aria-hidden="true"></li>
-            <li class="day"><span>1</span></li>
-            <li class="day"><span>2</span></li>
-            <li class="day">
-              <span>3</span>
-              <img src="images/memory/meeting-photo-01.png" alt="10월 3일 만남 사진" class="day__photo" />
-              <span class="day__count">기록 3개</span>
-            </li>
-            <li class="day"><span>4</span></li>
-            <li class="day"><span>5</span></li>
-            <li class="day"><span>6</span></li>
-            <li class="day"><span>7</span></li>
-            <li class="day"><span>8</span></li>
-            <li class="day"><span>9</span></li>
-            <li class="day is-selected" aria-current="date">
-              <span>10</span>
-              <img src="images/memory/meeting-photo-02.png" alt="10월 10일 만남 사진" class="day__photo" />
-              <span class="day__count">기록 1개 · 선택됨</span>
-            </li>
-            <li class="day"><span>11</span></li>
-            <li class="day"><span>12</span></li>
-            <li class="day"><span>13</span></li>
-            <li class="day">
-              <span>14</span>
-              <img src="images/memory/meeting-photo-03.png" alt="10월 14일 만남 사진" class="day__photo" />
-              <span class="day__count">기록 1개</span>
-            </li>
-            <li class="day">
-              <span>15</span>
-              <img src="images/memory/meeting-photo-04.png" alt="10월 15일 만남 사진" class="day__photo" />
-              <span class="day__count">기록 2개</span>
-            </li>
-            <li class="day"><span>16</span></li>
-            <li class="day"><span>17</span></li>
-            <li class="day">
-              <span>18</span>
-              <img src="images/memory/meeting-photo-05.png" alt="10월 18일 만남 사진" class="day__photo" />
-              <span class="day__count">기록 2개</span>
-            </li>
-            <li class="day"><span>19</span></li>
-            <li class="day"><span>20</span></li>
-            <li class="day"><span>21</span></li>
-            <li class="day"><span>22</span></li>
-            <li class="day"><span>23</span></li>
-            <li class="day"><span>24</span></li>
-            <li class="day"><span>25</span></li>
-            <li class="day"><span>26</span></li>
-            <li class="day"><span>27</span></li>
-            <li class="day"><span>28</span></li>
-            <li class="day"><span>29</span></li>
-            <li class="day"><span>30</span></li>
-            <li class="day"><span>31</span></li>
-          </ol>
-        </section>
-
-        <div class="calendar-info">
-          <p>이번 달에 기록한 날 5일 </p>
-        </div>
-
-        <section class="record-detail">
-          <h2 class="record-detail__date">10월 10일 (토) · 기록 1개</h2>
-          <article class="record">
-            <img src="images/memory/meeting-photo-02.png" alt="10월 10일 만남 사진" class="record__photo" />
-            <div class="record__body">
-              <h3 class="record__title">카페 SNOW</h3>
-              <p class="record__meta">2026.10.10 · 오후 2시 · 카페 SNOW</p>
-              <p class="record__friend">함께한 친구 · 꽃송이</p>
-              <p class="record__memo">카페 분위기 너무 좋았다 🥰</p>
+          <p class="page-head__desc">
+            눈송이의 가을학기, 친구와 함께한 순간을 다시 만나보세요.
+          </p>
+          <p class="muted">
+            2026년 9월–11월 · 사진이 있는 날짜를 선택하면 기록이 열려요.
+          </p>
+        </header>
+        <div class="calendar-browser">
+          <section
+            class="calendar-month"
+            id="month-09"
+            tabindex="-1"
+            aria-labelledby="month-title-9"
+          >
+            <div class="month-nav">
+              <span class="month-nav__boundary">학기 시작</span>
+              <h2 class="month-nav__current" id="month-title-9">2026.09</h2>
+              <a class="btn" href="#month-10">다음 달 ›</a>
             </div>
-          </article>
-        </section>
+            <div class="calendar" aria-label="2026년 9월 달력">
+              <ol class="calendar__weekdays">
+                <li>일<span class="weekday-suffix">요일</span></li>
+                <li>월<span class="weekday-suffix">요일</span></li>
+                <li>화<span class="weekday-suffix">요일</span></li>
+                <li>수<span class="weekday-suffix">요일</span></li>
+                <li>목<span class="weekday-suffix">요일</span></li>
+                <li>금<span class="weekday-suffix">요일</span></li>
+                <li>토<span class="weekday-suffix">요일</span></li>
+              </ol>
+              <ol class="calendar__days">
+                <li class="day is-empty" aria-hidden="true"></li>
+                <li class="day is-empty" aria-hidden="true"></li>
+                <li class="day"><span>1</span></li>
+                <li class="day"><span>2</span></li>
+                <li class="day"><span>3</span></li>
+                <li class="day"><span>4</span></li>
+                <li class="day"><span>5</span></li>
+                <li class="day"><span>6</span></li>
+                <li class="day"><span>7</span></li>
+                <li class="day"><span>8</span></li>
+                <li class="day"><span>9</span></li>
+                <li class="day"><span>10</span></li>
+                <li class="day"><span>11</span></li>
+                <li class="day"><span>12</span></li>
+                <li class="day"><span>13</span></li>
+                <li class="day"><span>14</span></li>
+                <li class="day"><span>15</span></li>
+                <li class="day"><span>16</span></li>
+                <li class="day"><span>17</span></li>
+                <li class="day day--record">
+                  <a
+                    class="day__link day__link--default"
+                    href="#record-0918"
+                    aria-label="9월 18일, 기록 1개 보기"
+                    ><span>18</span
+                    ><img
+                      class="day__photo"
+                      src="images/memory/meeting-photo-02.png"
+                      alt=""
+                      width="160"
+                      height="160"
+                    /><span class="day__count">기록 1개</span></a
+                  >
+                </li>
+                <li class="day"><span>19</span></li>
+                <li class="day"><span>20</span></li>
+                <li class="day"><span>21</span></li>
+                <li class="day"><span>22</span></li>
+                <li class="day"><span>23</span></li>
+                <li class="day"><span>24</span></li>
+                <li class="day day--record">
+                  <a
+                    class="day__link"
+                    href="#record-0925"
+                    aria-label="9월 25일, 기록 1개 보기"
+                    ><span>25</span
+                    ><img
+                      class="day__photo"
+                      src="images/memory/meeting-photo-03.png"
+                      alt=""
+                      width="160"
+                      height="160"
+                    /><span class="day__count">기록 1개</span></a
+                  >
+                </li>
+                <li class="day"><span>26</span></li>
+                <li class="day"><span>27</span></li>
+                <li class="day"><span>28</span></li>
+                <li class="day"><span>29</span></li>
+                <li class="day"><span>30</span></li>
+              </ol>
+            </div>
+            <p class="calendar-info">이번 달에 기록한 날 2일</p>
+            <div class="month-records">
+              <section
+                class="record-detail record-detail--default"
+                id="record-0918"
+                tabindex="-1"
+                aria-labelledby="record-title-0918"
+              >
+                <h3 class="record-detail__date" id="record-title-0918">
+                  9월 18일 (금) · 기록 1개
+                </h3>
+                <article class="record">
+                  <img
+                    class="record__photo"
+                    src="images/memory/meeting-photo-02.png"
+                    alt="카페에서 나눈 첫 인사 만남 사진"
+                    width="244"
+                    height="244"
+                  />
+                  <div class="record__body">
+                    <h4 class="record__title">카페에서 나눈 첫 인사</h4>
+                    <p class="record__meta">2026.09.18 · 카페 SNOW</p>
+                    <p class="record__friend">함께한 친구 · 꽃송이</p>
+                    <p class="record__memo">
+                      새 학기 이야기를 나누며 서로의 취향을 알아갔어요.
+                    </p>
+                  </div>
+                </article>
+              </section>
+              <section
+                class="record-detail"
+                id="record-0925"
+                tabindex="-1"
+                aria-labelledby="record-title-0925"
+              >
+                <h3 class="record-detail__date" id="record-title-0925">
+                  9월 25일 (금) · 기록 1개
+                </h3>
+                <article class="record">
+                  <img
+                    class="record__photo"
+                    src="images/memory/meeting-photo-03.png"
+                    alt="가을 산책 만남 사진"
+                    width="244"
+                    height="244"
+                  />
+                  <div class="record__body">
+                    <h4 class="record__title">가을 산책</h4>
+                    <p class="record__meta">2026.09.25 · 효창공원</p>
+                    <p class="record__friend">함께한 친구 · 달송이</p>
+                    <p class="record__memo">
+                      조금 선선해진 길을 걸으며 사진을 남겼어요.
+                    </p>
+                  </div>
+                </article>
+              </section>
+            </div>
+          </section>
+          <section
+            class="calendar-month calendar-month--default"
+            id="month-10"
+            tabindex="-1"
+            aria-labelledby="month-title-10"
+          >
+            <div class="month-nav">
+              <a class="btn" href="#month-09">‹ 이전 달</a>
+              <h2 class="month-nav__current" id="month-title-10">2026.10</h2>
+              <a class="btn" href="#month-11">다음 달 ›</a>
+            </div>
+            <div class="calendar" aria-label="2026년 10월 달력">
+              <ol class="calendar__weekdays">
+                <li>일<span class="weekday-suffix">요일</span></li>
+                <li>월<span class="weekday-suffix">요일</span></li>
+                <li>화<span class="weekday-suffix">요일</span></li>
+                <li>수<span class="weekday-suffix">요일</span></li>
+                <li>목<span class="weekday-suffix">요일</span></li>
+                <li>금<span class="weekday-suffix">요일</span></li>
+                <li>토<span class="weekday-suffix">요일</span></li>
+              </ol>
+              <ol class="calendar__days">
+                <li class="day is-empty" aria-hidden="true"></li>
+                <li class="day is-empty" aria-hidden="true"></li>
+                <li class="day is-empty" aria-hidden="true"></li>
+                <li class="day is-empty" aria-hidden="true"></li>
+                <li class="day"><span>1</span></li>
+                <li class="day"><span>2</span></li>
+                <li class="day day--record">
+                  <a
+                    class="day__link"
+                    href="#record-1003"
+                    aria-label="10월 3일, 기록 3개 보기"
+                    ><span>3</span
+                    ><img
+                      class="day__photo"
+                      src="images/memory/meeting-photo-01.png"
+                      alt=""
+                      width="160"
+                      height="160"
+                    /><span class="day__count">기록 3개</span></a
+                  >
+                </li>
+                <li class="day"><span>4</span></li>
+                <li class="day"><span>5</span></li>
+                <li class="day"><span>6</span></li>
+                <li class="day"><span>7</span></li>
+                <li class="day"><span>8</span></li>
+                <li class="day"><span>9</span></li>
+                <li class="day day--record">
+                  <a
+                    class="day__link day__link--default"
+                    href="#record-1010"
+                    aria-label="10월 10일, 기록 1개 보기"
+                    ><span>10</span
+                    ><img
+                      class="day__photo"
+                      src="images/memory/meeting-photo-02.png"
+                      alt=""
+                      width="160"
+                      height="160"
+                    /><span class="day__count">기록 1개</span></a
+                  >
+                </li>
+                <li class="day"><span>11</span></li>
+                <li class="day"><span>12</span></li>
+                <li class="day"><span>13</span></li>
+                <li class="day day--record">
+                  <a
+                    class="day__link"
+                    href="#record-1014"
+                    aria-label="10월 14일, 기록 1개 보기"
+                    ><span>14</span
+                    ><img
+                      class="day__photo"
+                      src="images/memory/meeting-photo-03.png"
+                      alt=""
+                      width="160"
+                      height="160"
+                    /><span class="day__count">기록 1개</span></a
+                  >
+                </li>
+                <li class="day day--record">
+                  <a
+                    class="day__link"
+                    href="#record-1015"
+                    aria-label="10월 15일, 기록 2개 보기"
+                    ><span>15</span
+                    ><img
+                      class="day__photo"
+                      src="images/memory/meeting-photo-04.png"
+                      alt=""
+                      width="160"
+                      height="160"
+                    /><span class="day__count">기록 2개</span></a
+                  >
+                </li>
+                <li class="day"><span>16</span></li>
+                <li class="day"><span>17</span></li>
+                <li class="day day--record">
+                  <a
+                    class="day__link"
+                    href="#record-1018"
+                    aria-label="10월 18일, 기록 2개 보기"
+                    ><span>18</span
+                    ><img
+                      class="day__photo"
+                      src="images/memory/meeting-photo-05.png"
+                      alt=""
+                      width="160"
+                      height="160"
+                    /><span class="day__count">기록 2개</span></a
+                  >
+                </li>
+                <li class="day"><span>19</span></li>
+                <li class="day"><span>20</span></li>
+                <li class="day"><span>21</span></li>
+                <li class="day"><span>22</span></li>
+                <li class="day"><span>23</span></li>
+                <li class="day"><span>24</span></li>
+                <li class="day"><span>25</span></li>
+                <li class="day"><span>26</span></li>
+                <li class="day"><span>27</span></li>
+                <li class="day"><span>28</span></li>
+                <li class="day"><span>29</span></li>
+                <li class="day"><span>30</span></li>
+                <li class="day"><span>31</span></li>
+              </ol>
+            </div>
+            <p class="calendar-info">이번 달에 기록한 날 5일</p>
+            <div class="month-records">
+              <section
+                class="record-detail"
+                id="record-1003"
+                tabindex="-1"
+                aria-labelledby="record-title-1003"
+              >
+                <h3 class="record-detail__date" id="record-title-1003">
+                  10월 3일 (토) · 기록 3개
+                </h3>
+                <article class="record">
+                  <img
+                    class="record__photo"
+                    src="images/memory/meeting-photo-01.png"
+                    alt="보드게임 한 판 만남 사진"
+                    width="244"
+                    height="244"
+                  />
+                  <div class="record__body">
+                    <h4 class="record__title">보드게임 한 판</h4>
+                    <p class="record__meta">2026.10.03 · 보드게임 카페</p>
+                    <p class="record__friend">함께한 친구 · 봄송이</p>
+                    <p class="record__memo">
+                      새로운 게임 규칙을 함께 익혔어요.
+                    </p>
+                  </div>
+                </article>
+                <article class="record">
+                  <img
+                    class="record__photo"
+                    src="images/memory/meeting-photo-02.png"
+                    alt="게임 후 디저트 만남 사진"
+                    width="244"
+                    height="244"
+                  />
+                  <div class="record__body">
+                    <h4 class="record__title">게임 후 디저트</h4>
+                    <p class="record__meta">2026.10.03 · 카페 SNOW</p>
+                    <p class="record__friend">함께한 친구 · 봄송이</p>
+                    <p class="record__memo">
+                      재미있었던 순간을 다시 이야기했어요.
+                    </p>
+                  </div>
+                </article>
+                <article class="record">
+                  <img
+                    class="record__photo"
+                    src="images/memory/meeting-photo-05.png"
+                    alt="다음 모임 약속 만남 사진"
+                    width="244"
+                    height="244"
+                  />
+                  <div class="record__body">
+                    <h4 class="record__title">다음 모임 약속</h4>
+                    <p class="record__meta">2026.10.03 · 학교 앞</p>
+                    <p class="record__friend">함께한 친구 · 봄송이</p>
+                    <p class="record__memo">
+                      다음에는 다른 친구들도 함께 만나기로 했어요.
+                    </p>
+                  </div>
+                </article>
+              </section>
+              <section
+                class="record-detail record-detail--default"
+                id="record-1010"
+                tabindex="-1"
+                aria-labelledby="record-title-1010"
+              >
+                <h3 class="record-detail__date" id="record-title-1010">
+                  10월 10일 (토) · 기록 1개
+                </h3>
+                <article class="record">
+                  <img
+                    class="record__photo"
+                    src="images/memory/meeting-photo-02.png"
+                    alt="카페 SNOW 만남 사진"
+                    width="244"
+                    height="244"
+                  />
+                  <div class="record__body">
+                    <h4 class="record__title">카페 SNOW</h4>
+                    <p class="record__meta">2026.10.10 · 카페 SNOW</p>
+                    <p class="record__friend">함께한 친구 · 꽃송이</p>
+                    <p class="record__memo">
+                      카페 분위기 너무 좋았다. 함께한 시간이 오래 기억에 남을 것
+                      같아요.
+                    </p>
+                  </div>
+                </article>
+              </section>
+              <section
+                class="record-detail"
+                id="record-1014"
+                tabindex="-1"
+                aria-labelledby="record-title-1014"
+              >
+                <h3 class="record-detail__date" id="record-title-1014">
+                  10월 14일 (수) · 기록 1개
+                </h3>
+                <article class="record">
+                  <img
+                    class="record__photo"
+                    src="images/memory/meeting-photo-03.png"
+                    alt="가을 산책 만남 사진"
+                    width="244"
+                    height="244"
+                  />
+                  <div class="record__body">
+                    <h4 class="record__title">가을 산책</h4>
+                    <p class="record__meta">2026.10.14 · 이촌 한강공원</p>
+                    <p class="record__friend">함께한 친구 · 달송이</p>
+                    <p class="record__memo">노을을 보며 천천히 걸었어요.</p>
+                  </div>
+                </article>
+              </section>
+              <section
+                class="record-detail"
+                id="record-1015"
+                tabindex="-1"
+                aria-labelledby="record-title-1015"
+              >
+                <h3 class="record-detail__date" id="record-title-1015">
+                  10월 15일 (목) · 기록 2개
+                </h3>
+                <article class="record">
+                  <img
+                    class="record__photo"
+                    src="images/memory/meeting-photo-04.png"
+                    alt="공강의 작은 피크닉 만남 사진"
+                    width="244"
+                    height="244"
+                  />
+                  <div class="record__body">
+                    <h4 class="record__title">공강의 작은 피크닉</h4>
+                    <p class="record__meta">2026.10.15 · 교내 벤치</p>
+                    <p class="record__friend">함께한 친구 · 별송이</p>
+                    <p class="record__memo">
+                      수업 사이 잠깐의 여유를 나눴어요.
+                    </p>
+                  </div>
+                </article>
+                <article class="record">
+                  <img
+                    class="record__photo"
+                    src="images/memory/meeting-photo-02.png"
+                    alt="노래 추천 만남 사진"
+                    width="244"
+                    height="244"
+                  />
+                  <div class="record__body">
+                    <h4 class="record__title">노래 추천</h4>
+                    <p class="record__meta">2026.10.15 · 교내 벤치</p>
+                    <p class="record__friend">함께한 친구 · 별송이</p>
+                    <p class="record__memo">
+                      요즘 자주 듣는 노래를 서로 추천했어요.
+                    </p>
+                  </div>
+                </article>
+              </section>
+              <section
+                class="record-detail"
+                id="record-1018"
+                tabindex="-1"
+                aria-labelledby="record-title-1018"
+              >
+                <h3 class="record-detail__date" id="record-title-1018">
+                  10월 18일 (일) · 기록 2개
+                </h3>
+                <article class="record">
+                  <img
+                    class="record__photo"
+                    src="images/memory/meeting-photo-05.png"
+                    alt="보드게임 모임 만남 사진"
+                    width="244"
+                    height="244"
+                  />
+                  <div class="record__body">
+                    <h4 class="record__title">보드게임 모임</h4>
+                    <p class="record__meta">2026.10.18 · 보드게임 카페</p>
+                    <p class="record__friend">함께한 친구 · 봄송이, 꽃송이</p>
+                    <p class="record__memo">웃음이 끊이지 않았던 오후였어요.</p>
+                  </div>
+                </article>
+                <article class="record">
+                  <img
+                    class="record__photo"
+                    src="images/memory/meeting-photo-01.png"
+                    alt="함께 먹은 저녁 만남 사진"
+                    width="244"
+                    height="244"
+                  />
+                  <div class="record__body">
+                    <h4 class="record__title">함께 먹은 저녁</h4>
+                    <p class="record__meta">2026.10.18 · 숙대입구역</p>
+                    <p class="record__friend">함께한 친구 · 봄송이, 꽃송이</p>
+                    <p class="record__memo">다음 만남도 기대돼요.</p>
+                  </div>
+                </article>
+              </section>
+            </div>
+          </section>
+          <section
+            class="calendar-month"
+            id="month-11"
+            tabindex="-1"
+            aria-labelledby="month-title-11"
+          >
+            <div class="month-nav">
+              <a class="btn" href="#month-10">‹ 이전 달</a>
+              <h2 class="month-nav__current" id="month-title-11">2026.11</h2>
+              <span class="month-nav__boundary">학기 마지막 달</span>
+            </div>
+            <div class="calendar" aria-label="2026년 11월 달력">
+              <ol class="calendar__weekdays">
+                <li>일<span class="weekday-suffix">요일</span></li>
+                <li>월<span class="weekday-suffix">요일</span></li>
+                <li>화<span class="weekday-suffix">요일</span></li>
+                <li>수<span class="weekday-suffix">요일</span></li>
+                <li>목<span class="weekday-suffix">요일</span></li>
+                <li>금<span class="weekday-suffix">요일</span></li>
+                <li>토<span class="weekday-suffix">요일</span></li>
+              </ol>
+              <ol class="calendar__days">
+                <li class="day"><span>1</span></li>
+                <li class="day"><span>2</span></li>
+                <li class="day"><span>3</span></li>
+                <li class="day"><span>4</span></li>
+                <li class="day"><span>5</span></li>
+                <li class="day day--record">
+                  <a
+                    class="day__link day__link--default"
+                    href="#record-1106"
+                    aria-label="11월 6일, 기록 1개 보기"
+                    ><span>6</span
+                    ><img
+                      class="day__photo"
+                      src="images/memory/meeting-photo-04.png"
+                      alt=""
+                      width="160"
+                      height="160"
+                    /><span class="day__count">기록 1개</span></a
+                  >
+                </li>
+                <li class="day"><span>7</span></li>
+                <li class="day"><span>8</span></li>
+                <li class="day"><span>9</span></li>
+                <li class="day"><span>10</span></li>
+                <li class="day"><span>11</span></li>
+                <li class="day"><span>12</span></li>
+                <li class="day day--record">
+                  <a
+                    class="day__link"
+                    href="#record-1113"
+                    aria-label="11월 13일, 기록 1개 보기"
+                    ><span>13</span
+                    ><img
+                      class="day__photo"
+                      src="images/memory/meeting-photo-03.png"
+                      alt=""
+                      width="160"
+                      height="160"
+                    /><span class="day__count">기록 1개</span></a
+                  >
+                </li>
+                <li class="day"><span>14</span></li>
+                <li class="day"><span>15</span></li>
+                <li class="day"><span>16</span></li>
+                <li class="day"><span>17</span></li>
+                <li class="day"><span>18</span></li>
+                <li class="day"><span>19</span></li>
+                <li class="day"><span>20</span></li>
+                <li class="day"><span>21</span></li>
+                <li class="day"><span>22</span></li>
+                <li class="day"><span>23</span></li>
+                <li class="day"><span>24</span></li>
+                <li class="day"><span>25</span></li>
+                <li class="day"><span>26</span></li>
+                <li class="day"><span>27</span></li>
+                <li class="day"><span>28</span></li>
+                <li class="day"><span>29</span></li>
+                <li class="day"><span>30</span></li>
+              </ol>
+            </div>
+            <p class="calendar-info">이번 달에 기록한 날 2일</p>
+            <div class="month-records">
+              <section
+                class="record-detail record-detail--default"
+                id="record-1106"
+                tabindex="-1"
+                aria-labelledby="record-title-1106"
+              >
+                <h3 class="record-detail__date" id="record-title-1106">
+                  11월 6일 (금) · 기록 1개
+                </h3>
+                <article class="record">
+                  <img
+                    class="record__photo"
+                    src="images/memory/meeting-photo-04.png"
+                    alt="책 이야기 만남 사진"
+                    width="244"
+                    height="244"
+                  />
+                  <div class="record__body">
+                    <h4 class="record__title">책 이야기</h4>
+                    <p class="record__meta">2026.11.06 · 학교 근처 북카페</p>
+                    <p class="record__friend">함께한 친구 · 별송이</p>
+                    <p class="record__memo">
+                      마음에 남은 책 속 문장을 나눴어요.
+                    </p>
+                  </div>
+                </article>
+              </section>
+              <section
+                class="record-detail"
+                id="record-1113"
+                tabindex="-1"
+                aria-labelledby="record-title-1113"
+              >
+                <h3 class="record-detail__date" id="record-title-1113">
+                  11월 13일 (금) · 기록 1개
+                </h3>
+                <article class="record">
+                  <img
+                    class="record__photo"
+                    src="images/memory/meeting-photo-03.png"
+                    alt="가을의 마지막 산책 만남 사진"
+                    width="244"
+                    height="244"
+                  />
+                  <div class="record__body">
+                    <h4 class="record__title">가을의 마지막 산책</h4>
+                    <p class="record__meta">2026.11.13 · 효창공원</p>
+                    <p class="record__friend">함께한 친구 · 달송이</p>
+                    <p class="record__memo">
+                      낙엽이 쌓인 길에서 사진을 남겼어요.
+                    </p>
+                  </div>
+                </article>
+              </section>
+            </div>
+          </section>
+        </div>
       </main>
-      <!-- --------------------- -->
-
       <footer class="site-footer site-footer--compact">
         <p>© 2026 SM TOWN. 모든 권리 보유.</p>
         <p>SM TOWN 팀 | 대학 팀 프로젝트</p>

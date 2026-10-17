@@ -3,10 +3,10 @@
 /* 폰트 */
 
 @font-face {
-    font-family: 'IsYun';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff') format('woff');
-    font-weight: normal;
-    font-display: swap;
+  font-family: "IsYun";
+  src: url("../fonts/LeeSeoyun.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
 }
 
 /* 전역 변수, 기본 레이아웃, 공통 UI 및 반응형 스타일 */
@@ -17,7 +17,7 @@
   --color-border: #dcd8d0;
   --color-text: #2f2f30;
   --color-text-sub: #635936;
-  --color-brand: #946644;
+  --color-brand: #855936;
   --color-active: #dbddbd;
   --color-primary: #35454e;
 
@@ -27,7 +27,8 @@
   --radius-md: 10px;
   --radius-lg: 12px;
 
-  --font-base: "IsYun", ui-sans-serif, system-ui, -apple-system, "Apple SD Gothic Neo",
+  --font-base:
+    "IsYun", ui-sans-serif, system-ui, -apple-system, "Apple SD Gothic Neo",
     "Malgun Gothic", "Segoe UI", Roboto, sans-serif;
 }
 
@@ -93,10 +94,6 @@ input {
 
 .site-header--center {
   justify-content: center;
-}
-
-.site-header--tall {
-  height: 119px;
 }
 
 .logo {
@@ -197,7 +194,7 @@ input {
 /* ------- 예은 작업 부분 ------- */
 
 :root {
-  --color-muted: #756f63;
+  --color-muted: #6a6458;
   --color-olive: #566047;
   --color-paper: #fffdf9;
 }
@@ -251,7 +248,9 @@ input {
   padding-inline: 18px;
   font-size: 13px;
   text-decoration: none;
-  transition: background-color 0.2s, border-color 0.2s;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
 }
 
 .btn--inline {
@@ -466,5 +465,136 @@ input {
   .panel {
     padding: 20px;
   }
+}
+/* ---------- 프로필에서 보여 주는 주간 시간표 ---------- */
+.week-table {
+  width: 100%;
+  min-width: 540px;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 11px;
+}
+
+.week-table caption {
+  padding: 10px;
+  background: var(--color-paper);
+  color: var(--color-muted);
+  text-align: left;
+}
+
+.week-table th,
+.week-table td {
+  height: 43px;
+  padding: 8px 6px;
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.week-table tr > :last-child {
+  border-right: 0;
+}
+
+.week-table tbody tr:last-child > * {
+  border-bottom: 0;
+}
+
+.week-table thead,
+.week-table tbody th {
+  background: #efede6;
+  font-weight: 600;
+}
+
+.week-table td {
+  background: var(--color-paper);
+}
+
+.week-table .free-time {
+  background: #e2e6d3;
+  color: #435039;
+  font-weight: 600;
+}
+
+.table-note {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 12px;
+  color: var(--color-muted);
+  font-size: 11px;
+}
+
+.week-table .course {
+  background: #e8e9dc;
+  color: #435039;
+  font-weight: 600;
+}
+.week-table .course--warm {
+  background: #eee0d5;
+  color: #765642;
+}
+.week-table .course--soft {
+  background: #e2e8e4;
+  color: #405b55;
+}
+.week-table .shared-time {
+  background: #cbd8b4;
+  color: #304126;
+  font-weight: 700;
+}
+.schedule-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  margin-top: 18px;
+  padding: 0;
+  list-style: none;
+  color: var(--color-muted);
+  font-size: 12px;
+}
+.schedule-legend__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.schedule-legend__item::before {
+  content: "";
+  flex-shrink: 0;
+  width: 11px;
+  height: 11px;
+  border: 1px solid #a5ae96;
+  border-radius: 3px;
+  background: #e8e9dc;
+}
+.schedule-legend__item--free::before {
+  background: #e2e6d3;
+}
+.schedule-legend__item--shared::before {
+  background: #cbd8b4;
+  border-color: #6b8052;
+}
+.feedback-panel {
+  display: none;
+  margin-top: 24px;
+  scroll-margin-top: 24px;
+}
+.feedback-panel:target {
+  display: grid;
+  gap: 16px;
+}
+.feedback-panel p {
+  line-height: 1.8;
+}
+.feedback-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+/* 해시로 선택한 내용을 유지하는 본문 바로가기입니다. */
+.state-skip {
+  display: none;
+}
+.state-skip--default {
+  display: block;
 }
 /* --------------------- */
