@@ -1,1 +1,521 @@
-/* mypage.html, profile-edit.html 전용 스타일을 작성합니다. */
+/* ------- 예은 작업 부분 ------- */
+/* 마이페이지와 프로필 수정 전용 스타일. 공통 UI는 common.css를 참고합니다. */
+.profile-stack {
+  display: grid;
+  gap: 20px;
+}
+
+.profile-summary {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.profile-photo {
+  flex-shrink: 0;
+  width: 120px;
+  height: 140px;
+  border: 1px solid #d9dcc8;
+  border-radius: 10px;
+  background: #e4e8d8;
+  object-fit: cover;
+}
+
+.profile-summary__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.profile-name {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.profile-name h2 {
+  font-size: 24px;
+  letter-spacing: -0.04em;
+}
+
+.profile-bio {
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.profile-stats {
+  display: flex;
+  gap: 18px;
+  margin-top: 14px;
+  color: var(--color-muted);
+  font-size: 12px;
+}
+
+.profile-stats strong {
+  margin-left: 5px;
+  color: var(--color-text);
+}
+
+.profile-shortcuts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.shortcut {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 22px;
+}
+
+.shortcut:hover {
+  border-color: #a7ab92;
+  background: #f3f2e9;
+}
+
+.shortcut__icon {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 10px;
+  background: #e8e9dc;
+  color: var(--color-olive);
+}
+
+.shortcut h2 {
+  margin-bottom: 4px;
+  font-size: 15px;
+}
+
+.shortcut__arrow {
+  position: absolute;
+  top: 24px;
+  right: 22px;
+  color: var(--color-muted);
+}
+
+.profile-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.interest-panel .tags {
+  margin-block: 16px;
+}
+
+.music {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-block: 18px 10px;
+}
+
+.music__cover {
+  display: grid;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid #d3d7be;
+  border-radius: 8px;
+  background: #e6e8d8;
+  color: var(--color-olive);
+}
+
+.music strong {
+  display: block;
+  font-size: 14px;
+}
+
+.my-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.my-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-paper);
+}
+
+.my-group:hover {
+  border-color: var(--color-brand);
+}
+
+.my-group img {
+  width: 76px;
+  height: 76px;
+  border-radius: 7px;
+  object-fit: cover;
+}
+
+.my-group strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.my-group p {
+  color: var(--color-muted);
+  font-size: 11px;
+}
+
+/* ---------- 프로필 입력 ---------- */
+.profile-form {
+  display: grid;
+  gap: 20px;
+}
+
+.profile-form fieldset {
+  min-width: 0;
+  border: 0;
+}
+
+.profile-form legend {
+  margin-bottom: 18px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.profile-basic {
+  display: grid;
+  grid-template-columns: 130px minmax(0, 1fr);
+  align-items: start;
+  gap: 28px;
+}
+
+.profile-upload {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.profile-upload .profile-photo {
+  width: 110px;
+  height: 128px;
+}
+
+.profile-upload label {
+  color: var(--color-text-sub);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.profile-upload input {
+  max-width: 100%;
+  font-size: 10px;
+}
+
+.profile-upload input::file-selector-button {
+  margin-bottom: 6px;
+  padding: 6px 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  background: var(--color-paper);
+  font: inherit;
+  cursor: pointer;
+}
+
+.profile-fields {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.2fr;
+  align-items: start;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field + .field--stacked {
+  margin-top: 20px;
+}
+
+.field label {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 11px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 7px;
+  background: var(--color-paper);
+  color: var(--color-text);
+  font: inherit;
+  font-size: 13px;
+}
+
+.field textarea {
+  min-height: 112px;
+  resize: vertical;
+  line-height: 1.8;
+}
+
+.field small {
+  color: var(--color-muted);
+  font-size: 11px;
+}
+
+.field-help {
+  grid-column: 1 / -1;
+  color: var(--color-muted);
+  font-size: 12px;
+}
+
+.interest-choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-block: 16px 8px;
+}
+
+.interest-choice {
+  position: relative;
+  cursor: pointer;
+}
+
+.interest-choice input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.interest-choice span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 7px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-paper);
+  font-size: 12px;
+}
+
+.interest-choice input:checked + span {
+  border-color: #6b7657;
+  background: #e2e6d3;
+  color: #3e4b32;
+  font-weight: 600;
+}
+
+.interest-choice input:checked + span::before {
+  width: 9px;
+  height: 5px;
+  margin-right: 2px;
+  transform: translateY(-1px) rotate(-45deg);
+  border-bottom: 2px solid currentColor;
+  border-left: 2px solid currentColor;
+  content: "";
+}
+
+.interest-choice input:focus-visible + span {
+  outline: 3px solid var(--color-brand);
+  outline-offset: 3px;
+}
+
+.form-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding-top: 6px;
+}
+
+.form-actions__buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.form-actions__buttons .btn {
+  min-width: 140px;
+}
+
+.form-actions p {
+  max-width: 440px;
+  color: var(--color-muted);
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .profile-summary {
+    flex-wrap: wrap;
+  }
+
+  .profile-summary > .btn {
+    margin-left: 148px;
+  }
+
+  .my-groups {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .profile-summary {
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .profile-photo {
+    width: 80px;
+    height: 96px;
+  }
+
+  .profile-name h2 {
+    font-size: 21px;
+  }
+
+  .profile-summary__body {
+    flex-basis: calc(100% - 98px);
+  }
+
+  .profile-bio {
+    font-size: 12px;
+  }
+
+  .profile-stats {
+    flex-wrap: wrap;
+    gap: 6px 12px;
+  }
+
+  .profile-summary > .btn {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .profile-shortcuts,
+  .profile-columns {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .shortcut {
+    flex-direction: row;
+    align-items: center;
+    padding: 18px;
+  }
+
+  .shortcut__arrow {
+    top: 27px;
+  }
+
+  .profile-basic {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .profile-upload {
+    align-items: flex-start;
+  }
+
+  .profile-fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .profile-fields .field:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .form-actions__buttons .btn {
+    min-width: 120px;
+  }
+}
+
+/* ---------- 프로필에서 보여 주는 주간 시간표 ---------- */
+.week-table {
+  width: 100%;
+  min-width: 540px;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 11px;
+}
+
+.week-table caption {
+  padding: 10px;
+  background: var(--color-paper);
+  color: var(--color-muted);
+  text-align: left;
+}
+
+.week-table th,
+.week-table td {
+  height: 43px;
+  padding: 8px 6px;
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.week-table tr > :last-child {
+  border-right: 0;
+}
+
+.week-table tbody tr:last-child > * {
+  border-bottom: 0;
+}
+
+.week-table thead,
+.week-table tbody th {
+  background: #efede6;
+  font-weight: 600;
+}
+
+.week-table td {
+  background: var(--color-paper);
+}
+
+.week-table .free-time {
+  background: #e2e6d3;
+  color: #435039;
+  font-weight: 600;
+}
+
+.table-note {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 12px;
+  color: var(--color-muted);
+  font-size: 11px;
+}
+
+.legend {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend::before {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #c3c9b3;
+  border-radius: 3px;
+  background: #e2e6d3;
+  content: "";
+}
+/* --------------------- */

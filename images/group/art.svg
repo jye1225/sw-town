@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" fill="none">
+  <title>서로 다른 시선으로 보는 전시</title>
+  <path fill="#dce0d7" d="M0 0h600v360H0z" />
+  <circle cx="485" cy="45" r="150" fill="#fffdf9" opacity=".3" />
+  <circle cx="65" cy="350" r="110" fill="#fffdf9" opacity=".25" />
+  <path d="M70 310h460" stroke="#3e4d3c" stroke-opacity=".15" stroke-width="2" />
+  <rect x="156" y="52" width="288" height="232" rx="5" fill="#b79c78" />
+  <rect x="168" y="64" width="264" height="208" fill="#faf5e9" />
+  <path d="M198 242V133a63 63 0 0 1 126 0v109" fill="#d6bd9d" />
+  <circle cx="355" cy="121" r="31" fill="#b3bc96" />
+  <path d="M269 242c1-58 63-84 130-96v96" fill="#7d8e75" />
+  <path d="M180 306h240M221 284v22M379 284v22" stroke="#9f927d" stroke-width="4" />
+  <path d="M248 230c20-30 29-44 29-88" stroke="#faf5e9" stroke-width="3" />
+</svg>

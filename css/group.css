@@ -1,1 +1,416 @@
-/* group.html, group-detail.html 전용 스타일을 작성합니다. */
+/* ------- 예은 작업 부분 ------- */
+
+.group-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+  border: 0;
+}
+
+.group-filter {
+  position: relative;
+  cursor: pointer;
+}
+
+.group-filter input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.group-filter span {
+  display: block;
+  padding: 9px 17px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-surface);
+  color: var(--color-text-sub);
+  font-size: 13px;
+}
+
+.group-filter input:checked + span {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-surface);
+  font-weight: 600;
+}
+
+.group-filter input:focus-visible + span {
+  outline: 3px solid var(--color-brand);
+  outline-offset: 4px;
+}
+
+.group-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+/* 라디오 버튼 선택에 따라 해당 카테고리 카드만 표시합니다. */
+.group-browser:has(#category-sports:checked) .group-card:not([data-category="sports"]),
+.group-browser:has(#category-reading:checked) .group-card:not([data-category="reading"]),
+.group-browser:has(#category-cafe:checked) .group-card:not([data-category="cafe"]),
+.group-browser:has(#category-culture:checked) .group-card:not([data-category="culture"]),
+.group-browser:has(#category-walk:checked) .group-card:not([data-category="walk"]) {
+  display: none;
+}
+
+.group-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-surface);
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.group-card:hover {
+  transform: translateY(-3px);
+  border-color: #a4aa90;
+}
+
+.group-card__image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  border-bottom: 1px solid var(--color-border);
+  object-fit: cover;
+}
+
+.group-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+}
+
+.group-card__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+}
+
+.group-card__category {
+  color: var(--color-brand);
+  font-weight: 600;
+}
+
+.group-card__status {
+  color: var(--color-olive);
+}
+
+.group-card h2 {
+  font-size: 18px;
+  letter-spacing: -0.04em;
+}
+
+.group-card__description {
+  color: var(--color-muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.group-card__info {
+  display: grid;
+  gap: 5px;
+  color: var(--color-text-sub);
+  font-size: 12px;
+}
+
+.group-card__info > span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.group-card__info .icon {
+  width: 14px;
+  height: 14px;
+}
+
+.group-card__footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--color-border);
+  font-size: 11px;
+}
+
+.group-card__footer strong {
+  color: var(--color-olive);
+}
+
+.group-card__footer span:last-child {
+  color: var(--color-brand);
+}
+
+.group-bottom-note {
+  margin-top: 28px;
+  padding: 16px 20px;
+  border-radius: 8px;
+  background: #e6e5db;
+  color: var(--color-text-sub);
+  font-size: 12px;
+  text-align: center;
+}
+
+/* 한 상세 HTML에서 주소의 #값에 맞는 모임을 보여 줍니다. */
+.group-view {
+  display: none;
+}
+
+.group-view--default {
+  display: block;
+}
+
+/* 상세 주소를 유지하면서 키보드 사용자가 본문으로 건너뛸 수 있게 합니다. */
+.detail-skip {
+  display: none;
+}
+
+.detail-skip--baseball {
+  display: block;
+}
+
+body:has(.group-view:target) .detail-skip {
+  display: none;
+}
+
+body:has(#baseball:target) .detail-skip--baseball,
+body:has(#reading:target) .detail-skip--reading,
+body:has(#cafe:target) .detail-skip--cafe,
+body:has(#exhibition:target) .detail-skip--exhibition,
+body:has(#photo:target) .detail-skip--photo,
+body:has(#walk:target) .detail-skip--walk {
+  display: block;
+}
+
+.group-detail-page:has(.group-view:target) .group-view {
+  display: none;
+}
+
+.group-detail-page:has(.group-view:target) .group-view:target {
+  display: block;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 28px;
+  color: var(--color-text-sub);
+  font-size: 12px;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.detail-heading {
+  margin-bottom: 26px;
+}
+
+.detail-heading .tags {
+  margin-bottom: 14px;
+}
+
+.detail-heading h1 {
+  margin-bottom: 10px;
+  font-size: clamp(27px, 3vw, 36px);
+  letter-spacing: -0.05em;
+}
+
+.detail-heading p {
+  color: var(--color-muted);
+  font-size: 14px;
+}
+
+.detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  align-items: start;
+  gap: 26px;
+}
+
+.detail-content {
+  display: grid;
+  min-width: 0;
+  gap: 20px;
+}
+
+.detail-cover {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.detail-introduction {
+  margin-block: 16px 20px;
+  color: var(--color-text-sub);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.member-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+  list-style: none;
+}
+
+.member {
+  min-width: 64px;
+  text-align: center;
+}
+
+.member__avatar {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  margin: 0 auto 8px;
+  border: 1px solid #cfd3bd;
+  border-radius: 50%;
+  background: #e0e5d2;
+  color: #4a553d;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.member:nth-child(2n) .member__avatar {
+  border-color: #dfcdbd;
+  background: #e8dacb;
+  color: #785c46;
+}
+
+.member strong {
+  display: block;
+  font-size: 12px;
+}
+
+.member small {
+  color: var(--color-muted);
+  font-size: 10px;
+}
+
+.detail-sidebar {
+  display: grid;
+  gap: 16px;
+}
+
+.meeting-facts {
+  display: grid;
+  gap: 20px;
+  margin-block: 24px;
+}
+
+.meeting-facts dt {
+  margin-bottom: 5px;
+  color: var(--color-muted);
+  font-size: 11px;
+}
+
+.meeting-facts dd {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.detail-sidebar .btn {
+  width: 100%;
+}
+
+.join-note {
+  margin-top: 10px;
+  color: var(--color-muted);
+  font-size: 11px;
+  text-align: center;
+}
+
+.meeting-guide {
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: #e8e8dd;
+}
+
+.meeting-guide summary {
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.meeting-guide ul {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+  padding-left: 16px;
+  color: var(--color-text-sub);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+@media (max-width: 1100px) {
+  .group-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .detail-layout {
+    grid-template-columns: minmax(0, 1fr) 260px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .detail-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-sidebar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+}
+
+@media (max-width: 640px) {
+  .group-grid,
+  .detail-sidebar {
+    grid-template-columns: 1fr;
+  }
+
+  .group-filters {
+    gap: 6px;
+    margin-bottom: 22px;
+  }
+
+  .group-filter span {
+    padding: 8px 13px;
+    font-size: 12px;
+  }
+
+  .group-card__body {
+    padding: 20px;
+  }
+
+  .group-card__image {
+    aspect-ratio: 16 / 9;
+  }
+
+  .member-list {
+    gap: 14px;
+  }
+}
+/* --------------------- */

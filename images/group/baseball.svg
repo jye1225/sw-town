@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" fill="none">
+  <title>함께 응원하는 날</title>
+  <path fill="#dce2ca" d="M0 0h600v360H0z" />
+  <circle cx="485" cy="45" r="150" fill="#fffdf9" opacity=".3" />
+  <circle cx="65" cy="350" r="110" fill="#fffdf9" opacity=".25" />
+  <path d="M70 310h460" stroke="#3e4d3c" stroke-opacity=".15" stroke-width="2" />
+  <path d="m300 72 190 150-190 98L110 222Z" fill="#b8c39b" />
+  <path d="m300 128 112 89-112 59-112-59Z" fill="#e9d7b7" />
+  <path d="m300 161 64 51-64 35-64-35Z" stroke="#fffdf9" stroke-width="3" />
+  <circle cx="375" cy="118" r="51" fill="#fffaf0" stroke="#797e66" stroke-width="2" />
+  <path d="M347 76c28 23 28 55 0 84M404 76c-28 23-28 55 0 84" stroke="#ac735a" stroke-width="3" stroke-dasharray="5 6" />
+  <path d="m183 95 63 83" stroke="#a27951" stroke-width="15" stroke-linecap="round" />
+  <path d="m167 72 21 27" stroke="#a27951" stroke-width="25" stroke-linecap="round" />
+</svg>

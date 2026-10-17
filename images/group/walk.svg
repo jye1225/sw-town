@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" fill="none">
+  <title>천천히 함께 걷는 길</title>
+  <path fill="#e1e4d2" d="M0 0h600v360H0z" />
+  <circle cx="485" cy="45" r="150" fill="#fffdf9" opacity=".3" />
+  <circle cx="65" cy="350" r="110" fill="#fffdf9" opacity=".25" />
+  <path d="M70 310h460" stroke="#3e4d3c" stroke-opacity=".15" stroke-width="2" />
+  <path d="M245 310c-52-43-39-77 25-105 84-36 92-62 57-100" stroke="#f9f3e5" stroke-width="48" />
+  <path d="M143 248v-91M450 263v-91" stroke="#998568" stroke-width="8" stroke-linecap="round" />
+  <ellipse cx="143" cy="132" rx="48" ry="69" fill="#9eae85" />
+  <ellipse cx="450" cy="145" rx="55" ry="80" fill="#b3bd93" />
+  <circle cx="329" cy="67" r="24" fill="#e8ca91" />
+  <path d="m182 286 14-21 14 21M381 288l14-21 14 21" stroke="#879a71" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M78 248h130M391 264h116" stroke="#aab696" stroke-width="3" stroke-linecap="round" />
+</svg>

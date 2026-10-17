@@ -1,21 +1,159 @@
-<!doctype html>
+<!DOCTYPE html>
+<!-- ------- 예은 작업 부분 ------- -->
 <html lang="ko">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SW Town | 프로필 수정</title>
-    <link rel="stylesheet" href="css/reset.css" />
+    <meta name="description" content="프로필 수정 · 눈송이들의 취향이 만나는 곳, SM TOWN" />
+    <title>프로필 수정 | SM TOWN</title>
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/profile.css" />
   </head>
   <body>
-    <header class="site-header"><a class="site-logo" href="index.html">SW Town</a></header>
-    <main class="container">
-      <h1>프로필 수정</h1>
-      <!-- TODO: 프로필 수정 화면의 HTML과 CSS를 작성합니다. -->
-      <p>화면 준비 중입니다.</p>
-      <a href="mypage.html">마이페이지</a>
-    </main>
-    <footer class="site-footer"><a href="index.html">홈으로</a></footer>
+    <a class="skip-link" href="#main-content">본문으로 바로 가기</a>
+    <div class="page page--content">
+      <header class="site-header site-header--compact">
+        <a href="index.html" class="logo">SM TOWN.</a>
+        <nav class="gnb gnb--compact" aria-label="주요 메뉴">
+          <a href="index.html" class="gnb__link">HOME</a>
+          <a href="friend.html" class="gnb__link">FRIEND</a>
+          <a href="group.html" class="gnb__link">GROUP</a>
+          <a href="calendar.html" class="gnb__link">CALENDAR</a>
+          <a href="mypage.html" class="gnb__link is-active" aria-current="page">MY PAGE</a>
+          <a href="mypage.html" class="profile-btn" aria-label="내 프로필">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4" /><path d="M4 21v-2a8 8 0 0 1 16 0v2" /></svg>
+          </a>
+        </nav>
+      </header>
+
+      <main id="main-content" class="page-main page-main--padded">
+        <header class="page-intro">
+          <div>
+            <p class="eyebrow">A LITTLE MORE YOU</p>
+            <h1>프로필 수정</h1>
+            <p class="page-description">취향과 일상을 담아, 나를 조금 더 소개해 주세요.</p>
+          </div>
+          <a class="text-link" href="mypage.html">마이페이지로 돌아가기 ↗</a>
+        </header>
+
+        <!-- 정적 화면 단계: 입력 UI만 제공하며, 저장 버튼은 의도적으로 비활성화합니다. -->
+        <form class="profile-form" id="profile-form" action="profile-edit.html" method="get" aria-describedby="save-note">
+          <section class="panel">
+            <fieldset>
+              <legend>기본 정보</legend>
+              <div class="profile-basic">
+                <div class="profile-upload">
+                  <img class="profile-photo" src="images/profile/snow-avatar.svg" alt="현재 프로필 일러스트" width="110" height="128" />
+                  <label for="profile-image">프로필 사진 선택</label>
+                  <input type="file" id="profile-image" name="profile-image" accept="image/png,image/jpeg,image/webp" aria-describedby="photo-help" />
+                  <span id="photo-help" class="muted">JPG · PNG · WEBP<br />미리보기는 준비 중이에요.</span>
+                </div>
+                <div class="profile-fields">
+                  <div class="field">
+                    <label for="nickname">닉네임</label>
+                    <input id="nickname" name="nickname" value="눈송이" maxlength="12" autocomplete="nickname" required aria-describedby="nickname-help" />
+                    <small id="nickname-help">최대 12자</small>
+                  </div>
+                  <div class="field">
+                    <label for="age">나이</label>
+                    <input type="number" id="age" name="age" value="22" min="18" max="100" />
+                  </div>
+                  <div class="field">
+                    <label for="mbti">MBTI</label>
+                    <select id="mbti" name="mbti">
+                      <option value="">선택 안 함</option>
+                  <option>ISTJ</option>
+                  <option>ISFJ</option>
+                  <option>INFJ</option>
+                  <option>INTJ</option>
+                  <option>ISTP</option>
+                  <option>ISFP</option>
+                  <option selected>INFP</option>
+                  <option>INTP</option>
+                  <option>ESTP</option>
+                  <option>ESFP</option>
+                  <option>ENFP</option>
+                  <option>ENTP</option>
+                  <option>ESTJ</option>
+                  <option>ESFJ</option>
+                  <option>ENFJ</option>
+                  <option>ENTJ</option>
+                    </select>
+                  </div>
+                  <p class="field-help">친구들에게 보여 줄 이름과 나를 표현하는 정보를 입력해 주세요.</p>
+                </div>
+              </div>
+            </fieldset>
+          </section>
+
+          <section class="panel">
+            <fieldset aria-describedby="interests-help">
+              <legend>관심사 선택</legend>
+              <p id="interests-help" class="muted">좋아하는 것을 골라 주세요. 여러 개를 선택할 수 있어요.</p>
+              <div class="interest-choices">
+              <label class="interest-choice"><input type="checkbox" name="interests" value="독서" checked /><span>독서</span></label>
+              <label class="interest-choice"><input type="checkbox" name="interests" value="영화" checked /><span>영화</span></label>
+              <label class="interest-choice"><input type="checkbox" name="interests" value="산책" checked /><span>산책</span></label>
+              <label class="interest-choice"><input type="checkbox" name="interests" value="카페" checked /><span>카페</span></label>
+              <label class="interest-choice"><input type="checkbox" name="interests" value="음악" /><span>음악</span></label>
+              <label class="interest-choice"><input type="checkbox" name="interests" value="야구" /><span>야구</span></label>
+              <label class="interest-choice"><input type="checkbox" name="interests" value="사진" /><span>사진</span></label>
+              <label class="interest-choice"><input type="checkbox" name="interests" value="전시" /><span>전시</span></label>
+              <label class="interest-choice"><input type="checkbox" name="interests" value="여행" /><span>여행</span></label>
+              <label class="interest-choice"><input type="checkbox" name="interests" value="요리" /><span>요리</span></label>
+              <label class="interest-choice"><input type="checkbox" name="interests" value="게임" /><span>게임</span></label>
+              <label class="interest-choice"><input type="checkbox" name="interests" value="운동" /><span>운동</span></label>
+              </div>
+            </fieldset>
+          </section>
+
+          <section class="panel">
+            <fieldset>
+              <legend>취향과 자기소개</legend>
+              <div class="field">
+                <label for="favorite-song">요즘 좋아하는 노래</label>
+                <input id="favorite-song" name="favorite-song" value="밤편지 — 아이유" maxlength="100" placeholder="노래 제목과 가수를 입력해 주세요" />
+              </div>
+              <div class="field field--stacked">
+                <label for="introduction">자기소개</label>
+                <textarea id="introduction" name="introduction" maxlength="300" rows="4" aria-describedby="introduction-help">작은 행복을 함께 나누는 걸 좋아해요.&#10;책과 산책, 그리고 좋은 사람들과 보내는 시간을 좋아합니다.</textarea>
+                <small id="introduction-help">나를 편하게 소개해 주세요. 최대 300자까지 입력할 수 있어요.</small>
+              </div>
+            </fieldset>
+          </section>
+
+          <section class="panel" aria-labelledby="edit-week-heading">
+            <div class="panel-heading"><h2 id="edit-week-heading">내 주간 시간표</h2><span class="tag">읽기 전용</span></div>
+            <div class="table-scroll" role="region" aria-label="주간 시간표, 작은 화면에서는 좌우로 스크롤" tabindex="0">
+          <table class="week-table">
+            <caption>눈송이의 주간 시간표 · 화면 구성용 예시</caption>
+            <thead>
+              <tr><th scope="col">시간</th><th scope="col">월요일</th><th scope="col">화요일</th><th scope="col">수요일</th><th scope="col">목요일</th><th scope="col">금요일</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">09–11</th><td>대학의 이해</td><td>—</td><td>대학의 이해</td><td>—</td><td>—</td></tr>
+              <tr><th scope="row">11–13</th><td>—</td><td>영어회화</td><td>—</td><td>영어회화</td><td>—</td></tr>
+              <tr><th scope="row">13–15</th><td>교양 수업</td><td>—</td><td>교양 수업</td><td>—</td><td>—</td></tr>
+              <tr><th scope="row">15–17</th><td>—</td><td class="free-time">만남 가능</td><td>—</td><td class="free-time">만남 가능</td><td class="free-time">만남 가능</td></tr>
+              <tr><th scope="row">17–19</th><td class="free-time">만남 가능</td><td>—</td><td class="free-time">만남 가능</td><td class="free-time">만남 가능</td><td class="free-time">만남 가능</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note"><span class="legend">만남 가능한 시간</span><span>등록된 시간표를 보여 주는 미리보기예요.</span></p>
+          </section>
+
+          <div class="form-actions">
+            <div class="form-actions__buttons"><a class="btn btn--sm" href="mypage.html">취소</a><button class="btn btn--sm btn--primary btn--inline" type="submit" disabled>저장하기 · 준비 중</button></div>
+            <p id="save-note">프로필 저장 기능은 준비 중이에요. 지금 입력한 내용과 선택한 사진은 저장되지 않아요.</p>
+          </div>
+        </form>
+      </main>
+
+      <footer class="site-footer site-footer--compact">
+        <p>© 2026 SM TOWN. 모든 권리 보유.</p>
+        <p>SM TOWN 팀 | 대학 팀 프로젝트</p>
+      </footer>
+    </div>
   </body>
 </html>
+<!-- --------------------- -->
