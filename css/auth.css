@@ -3,20 +3,22 @@
    Auth: 로그인 / 회원가입
    ========================================= */
 .auth {
+  word-break: keep-all;
   display: flex;
   justify-content: center;
-  padding: 56px 0;
+  padding: 56px var(--page-gutter);
 }
 
 .auth--login {
-  padding: 64px 0;
+  padding-block: 64px;
 }
 
 .auth__box {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 440px;
+  width: 100%;
+  max-width: 440px;
 }
 
 .auth--login .auth__box {
@@ -106,5 +108,16 @@
 
 .password-toggle:hover {
   background: var(--color-bg);
+}
+/* ---------- 반응형 ---------- */
+@media (max-width: 640px) {
+  .auth,
+  .auth--login {
+    padding-block: 40px;
+  }
+
+  .auth__title {
+    font-size: 28px;
+  }
 }
 /* --------------------- */
