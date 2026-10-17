@@ -3,6 +3,7 @@
    Calendar: 만남 기록 캘린더
    ========================================= */
 .calendar-page {
+  word-break: keep-all;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -16,7 +17,7 @@
 }
 
 .page-head__title {
-  font-size: 32px;
+  font-size: clamp(26px, 3vw, 32px);
   font-weight: 700;
 }
 
@@ -156,5 +157,69 @@
 
 .record__memo {
   font-size: 16px;
+}
+/* ---------- 반응형 ---------- */
+@media (max-width: 1000px) {
+  .day {
+    height: auto;
+    min-height: 120px;
+  }
+}
+
+@media (max-width: 760px) {
+  .calendar-page {
+    gap: 24px;
+    padding-block: 32px 48px;
+  }
+
+  .month-nav .btn {
+    height: 40px;
+    padding: 0 14px;
+    font-size: 14px;
+  }
+
+  .month-nav__current {
+    font-size: 22px;
+  }
+
+  .weekday-suffix,
+  .day__count {
+    display: none;
+  }
+
+  .day {
+    min-height: 64px;
+    padding: 6px;
+    font-size: 13px;
+  }
+
+  .day__photo {
+    border-radius: 4px;
+  }
+
+  .calendar-info {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .record-detail {
+    padding: 20px;
+  }
+
+  .record-detail__date {
+    font-size: 20px;
+  }
+
+  .record {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .record__photo {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
 }
 /* --------------------- */
