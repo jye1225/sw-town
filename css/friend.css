@@ -40,7 +40,7 @@
   border-radius: 99px;
   background: var(--color-surface);
   cursor: pointer;
-  font-size: 13px;
+  font-size: 14px;
 }
 .recommend-tabs input:checked + label {
   background: var(--color-active);
@@ -172,7 +172,7 @@
 .view-link {
   color: var(--color-brand);
   font-weight: 700;
-  font-size: 13px;
+  font-size: 14px;
 }
 .section-title {
   margin: 28px 0 16px;
@@ -217,7 +217,7 @@
   margin-bottom: 7px;
 }
 .friend-copy p {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--color-muted);
 }
 .friend-profile-view,
@@ -278,7 +278,7 @@ body:not(:has(.comparison-view:target)) .compare-tab[href="#with-flower"] {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  font-size: 13px;
+  font-size: 14px;
 }
 .back-to-profile {
   margin-top: 24px;

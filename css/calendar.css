@@ -5,23 +5,15 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  padding: 40px var(--page-gutter) 56px;
 }
 
-.page-head {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+/* 페이지 제목은 common.css의 page-intro를 사용하고, 간격은 flex gap으로 맞춥니다. */
+.calendar-page .page-intro {
+  margin-bottom: 0;
 }
 
-.page-head__title {
-  font-size: clamp(26px, 3vw, 32px);
-  font-weight: 700;
-}
-
-.page-head__desc {
-  font-size: 16px;
-  color: var(--color-text-sub);
+.calendar-page .page-description + .page-description {
+  margin-top: 4px;
 }
 
 /* 월 이동 */
@@ -72,6 +64,7 @@
 
 .day__photo {
   width: 100%;
+  height: auto;
   aspect-ratio: 1 / 1;
   border-radius: var(--radius-sm);
   background: #fff;
@@ -159,7 +152,6 @@
 @media (max-width: 760px) {
   .calendar-page {
     gap: 24px;
-    padding-block: 32px 48px;
   }
 
   .month-nav .btn {
@@ -180,7 +172,7 @@
   .day {
     min-height: 64px;
     padding: 6px;
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .day__photo {
@@ -189,7 +181,7 @@
 
   .calendar-info {
     flex-direction: column;
-    font-size: 13px;
+    font-size: 14px;
     gap: 4px;
   }
 
@@ -338,7 +330,7 @@
   }
   .month-nav__boundary {
     min-width: 62px;
-    font-size: 11px;
+    font-size: 12px;
   }
 }
 body:has(

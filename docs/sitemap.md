@@ -60,7 +60,7 @@
 | 홈 | 소모임 찾기 카드 | `group.html` |
 | 홈 | 회원가입하기 링크 | `signup.html` |
 | 로그인 | 로그인 버튼 | `mypage.html` (실제 인증 없음) |
-| 회원가입 | 회원가입 버튼 | 환영 알림 후 `index.html` (실제 가입 없음) |
+| 회원가입 | 회원가입 버튼 | 가입 완료 화면(`signup.html#signup-complete`) → 프로필 수정 또는 `index.html` (실제 가입 없음) |
 | 친구 찾기 | 하트 버튼 | `friend-profile.html` |
 | 내 친구 목록 | 친구 카드 | `friend-profile.html` |
 | 소모임 목록 | 모임 카드 | `group-detail.html#baseball` 등 모임별 주소 |

@@ -27,7 +27,7 @@
   border-radius: 999px;
   background: var(--color-surface);
   color: var(--color-text-sub);
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .group-filter input:checked + span {
@@ -101,7 +101,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 8px;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .group-card__category {
@@ -149,7 +149,7 @@
   margin-top: auto;
   padding-top: 14px;
   border-top: 1px solid var(--color-border);
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .group-card__footer strong {
@@ -310,7 +310,7 @@ body:has(#walk:target) .detail-skip--walk {
 
 .member small {
   color: var(--color-muted);
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .detail-sidebar {
@@ -327,11 +327,11 @@ body:has(#walk:target) .detail-skip--walk {
 .meeting-facts dt {
   margin-bottom: 5px;
   color: var(--color-muted);
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .meeting-facts dd {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   line-height: 1.7;
 }
@@ -359,7 +359,7 @@ body:has(#walk:target) .detail-skip--walk {
   margin-top: 14px;
   padding-left: 16px;
   color: var(--color-text-sub);
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.8;
 }
 
@@ -414,22 +414,36 @@ body:has(#walk:target) .detail-skip--walk {
   }
 }
 
-.join-details summary {
-  list-style: none;
-}
-.join-details summary::-webkit-details-marker {
+/* 참여 신청: 체크박스 상태에 따라 버튼 문구, 인원, 멤버 목록이 함께 바뀝니다. */
+.group-view:not(:has(.join__toggle:checked)) .when-joined,
+.group-view:has(.join__toggle:checked) .when-not-joined {
   display: none;
 }
-.join-details__body {
+.join__btn {
+  margin-top: 4px;
+}
+.join__toggle:checked + .join__btn {
+  border-color: #c4c9a4;
+  background: var(--color-active);
+  color: var(--color-text);
+}
+.join__toggle:checked + .join__btn:hover {
+  background: #cfd2ad;
+}
+.join__toggle:focus-visible + .join__btn {
+  outline: 3px solid var(--color-brand);
+  outline-offset: 4px;
+}
+.join__body {
   display: grid;
   gap: 12px;
   margin-top: 16px;
   padding-top: 16px;
   border-top: 1px solid var(--color-border);
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.8;
 }
-.join-details__body h3 {
+.join__body h3 {
   font-size: 15px;
 }
 /* --------------------- */
