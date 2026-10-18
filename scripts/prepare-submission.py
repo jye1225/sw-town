@@ -89,9 +89,9 @@ const jobs = JSON.parse(fs.readFileSync(0, 'utf8'));
         target.parent.mkdir(parents=True, exist_ok=True)
         css = (ROOT / relative).read_text(encoding='utf-8')
         if relative == 'css/common.css':
-            font = base64.b64encode((ROOT / 'fonts' / 'LeeSeoyun.woff').read_bytes()).decode('ascii')
-            css = css.replace('../fonts/LeeSeoyun.woff', 'data:font/woff;base64,' + font)
-            attribution = (ROOT / 'fonts' / 'README.md').read_text(encoding='utf-8')
+            font = base64.b64encode((ROOT / 'src' / 'fonts' / 'LeeSeoyun.woff').read_bytes()).decode('ascii')
+            css = css.replace('../src/fonts/LeeSeoyun.woff', 'data:font/woff;base64,' + font)
+            attribution = (ROOT / 'src' / 'fonts' / 'README.md').read_text(encoding='utf-8')
             css = '/*\n' + attribution.replace('*/', '* /') + '\n*/\n' + css
         target.write_text(css, encoding='utf-8', newline='\n')
     shutil.copy2(args.plan_pdf, destination / f'{name}_수행계획서.pdf')

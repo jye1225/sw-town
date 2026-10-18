@@ -68,13 +68,14 @@ sw-town/
 │   ├── group.css           # 소모임 화면
 │   ├── profile.css         # 마이페이지 · 프로필 수정
 │   └── calendar.css        # 캘린더
-├── js/                     # 추후 개발용, 현재 HTML에 연결하지 않음
 ├── images/
 │   ├── main/               # 홈 카드 사진
 │   ├── group/              # 소모임 일러스트
 │   ├── memory/             # 캘린더 만남 기록 사진
 │   ├── profile/            # 프로필 이미지
 │   └── logo/
+├── src/
+│   └── fonts/              # 웹폰트(이서윤체)와 출처
 ├── docs/
 │   ├── planning.md         # 기획
 │   └── sitemap.md          # 사이트맵
@@ -120,7 +121,7 @@ push한 뒤 GitHub에서 **Compare & pull request**를 눌러 PR을 만듭니다
 ## 통합 보완 및 제출 준비
 
 - 친구 추천 카드, 친구별 프로필·공강 비교, 9~11월 캘린더 월/날짜 선택은 HTML/CSS로 전환합니다.
-- 공통 시간표와 범례는 `common.css`에서 관리합니다. 폰트는 `fonts/`에서 상대 경로로 불러옵니다.
+- 공통 시간표와 범례는 `common.css`에서 관리합니다. 폰트는 `src/fonts/`에서 상대 경로로 불러옵니다.
 - 소모임 참여 안내와 프로필 입력 확인은 서버 저장 없이 화면 내에서 확인하는 흐름입니다.
-- 로그인·회원가입의 기존 JavaScript는 팀 요청에 따라 유지했습니다.
+- 로그인·회원가입도 JavaScript 없이 HTML 폼 이동과 CSS :target(가입 완료 화면)으로 동작합니다.
 - 제출 파일명 변환, JPEG 이미지 변환 및 ZIP 생성 방법은 [제출 준비](docs/submission.md)를 참고하세요.

@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "IsYun";
-  src: url("../fonts/LeeSeoyun.woff") format("woff");
+  src: url("../src/fonts/LeeSeoyun.woff") format("woff");
   font-weight: normal;
   font-display: swap;
 }
@@ -225,7 +225,7 @@ input {
 
 .gnb--compact .gnb__link {
   padding-inline: 14px;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .gnb--compact .profile-btn {
@@ -246,7 +246,7 @@ input {
   gap: 8px;
   height: 42px;
   padding-inline: 18px;
-  font-size: 13px;
+  font-size: 14px;
   text-decoration: none;
   transition:
     background-color 0.2s,
@@ -308,7 +308,7 @@ input {
 .eyebrow {
   margin-bottom: 8px;
   color: var(--color-brand);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.14em;
 }
@@ -362,7 +362,7 @@ input {
 
 .muted {
   color: var(--color-muted);
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .tags {
@@ -445,7 +445,7 @@ input {
   .gnb--compact .gnb__link {
     height: 34px;
     padding-inline: 6px;
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .gnb--compact .profile-btn {
@@ -472,7 +472,7 @@ input {
   min-width: 540px;
   border-collapse: collapse;
   text-align: center;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .week-table caption {
@@ -521,7 +521,7 @@ input {
   gap: 8px;
   margin-top: 12px;
   color: var(--color-muted);
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .week-table .course {

@@ -164,12 +164,12 @@
 .my-group strong {
   display: block;
   margin-bottom: 6px;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .my-group p {
   color: var(--color-muted);
-  font-size: 11px;
+  font-size: 12px;
 }
 
 /* ---------- 프로필 입력 ---------- */
@@ -216,7 +216,7 @@
 
 .profile-upload input {
   max-width: 100%;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .profile-upload input::file-selector-button {
@@ -248,7 +248,7 @@
 }
 
 .field label {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -264,7 +264,7 @@
   background: var(--color-paper);
   color: var(--color-text);
   font: inherit;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .field textarea {
@@ -275,7 +275,7 @@
 
 .field small {
   color: var(--color-muted);
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .field-help {
