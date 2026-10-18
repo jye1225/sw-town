@@ -110,14 +110,15 @@
               </section>
               <section class="panel" aria-labelledby="baseball-members">
                 <h2 class="panel-title" id="baseball-members">
-                  함께하는 친구들 · 4명
+                  함께하는 친구들 · <span class="when-not-joined">3명</span
+                  ><span class="when-joined">4명</span>
                 </h2>
                 <ul class="member-list">
                   <li class="member">
                     <span class="member__avatar" aria-hidden="true">별</span
                     ><strong>별송이</strong><small>모임장</small>
                   </li>
-                  <li class="member">
+                  <li class="member when-joined">
                     <span class="member__avatar" aria-hidden="true">눈</span
                     ><strong>눈송이</strong><small>함께하는 친구</small>
                   </li>
@@ -150,19 +151,28 @@
                   </div>
                   <div>
                     <dt>함께할 인원</dt>
-                    <dd>4 / 6명 · 2명 더 함께할 수 있어요</dd>
+                    <dd>
+                      <span class="when-not-joined">3 / 6명 · 3명 더 함께할 수 있어요</span
+                      ><span class="when-joined">4 / 6명 · 2명 더 함께할 수 있어요</span>
+                    </dd>
                   </div>
                   <div>
                     <dt>준비물</dt>
                     <dd>서로를 알아갈 열린 마음</dd>
                   </div>
                 </dl>
-                <details class="join-details">
-                  <summary class="btn btn--sm btn--primary">
-                    참여 안내 보기
-                  </summary>
-                  <div class="join-details__body">
-                    <h3>함께하기 전 확인해 주세요</h3>
+                <div class="join">
+                  <input
+                    class="join__toggle sr-only"
+                    type="checkbox"
+                    id="join-baseball" checked
+                  />
+                  <label class="btn btn--sm btn--primary join__btn" for="join-baseball"
+                    ><span class="when-not-joined">참여 신청하기</span
+                    ><span class="when-joined">신청 완료 ✓</span></label
+                  >
+                  <div class="join__body when-joined">
+                    <h3>함께할 준비가 됐어요!</h3>
                     <p>
                       모임 날짜와 장소를 확인하고, 함께하는 친구들과 만남 가능한
                       시간을 맞춰 보세요.
@@ -171,11 +181,10 @@
                       >친구와 공강 비교하기 →</a
                     >
                     <p class="muted">
-                      이 화면에서는 참여 방법을 안내하며 신청 내역을 저장하지
-                      않아요.
+                      참석이 어려워지면 버튼을 다시 눌러 신청을 취소해 주세요.
                     </p>
                   </div>
-                </details>
+                </div>
               </section>
               <details class="meeting-guide" open>
                 <summary>만나기 전에 확인해 주세요</summary>
@@ -233,14 +242,15 @@
               </section>
               <section class="panel" aria-labelledby="reading-members">
                 <h2 class="panel-title" id="reading-members">
-                  함께하는 친구들 · 3명
+                  함께하는 친구들 · <span class="when-not-joined">2명</span
+                  ><span class="when-joined">3명</span>
                 </h2>
                 <ul class="member-list">
                   <li class="member">
                     <span class="member__avatar" aria-hidden="true">별</span
                     ><strong>별송이</strong><small>모임장</small>
                   </li>
-                  <li class="member">
+                  <li class="member when-joined">
                     <span class="member__avatar" aria-hidden="true">눈</span
                     ><strong>눈송이</strong><small>함께하는 친구</small>
                   </li>
@@ -269,19 +279,28 @@
                   </div>
                   <div>
                     <dt>함께할 인원</dt>
-                    <dd>3 / 5명 · 2명 더 함께할 수 있어요</dd>
+                    <dd>
+                      <span class="when-not-joined">2 / 5명 · 3명 더 함께할 수 있어요</span
+                      ><span class="when-joined">3 / 5명 · 2명 더 함께할 수 있어요</span>
+                    </dd>
                   </div>
                   <div>
                     <dt>준비물</dt>
                     <dd>서로를 알아갈 열린 마음</dd>
                   </div>
                 </dl>
-                <details class="join-details">
-                  <summary class="btn btn--sm btn--primary">
-                    참여 안내 보기
-                  </summary>
-                  <div class="join-details__body">
-                    <h3>함께하기 전 확인해 주세요</h3>
+                <div class="join">
+                  <input
+                    class="join__toggle sr-only"
+                    type="checkbox"
+                    id="join-reading" checked
+                  />
+                  <label class="btn btn--sm btn--primary join__btn" for="join-reading"
+                    ><span class="when-not-joined">참여 신청하기</span
+                    ><span class="when-joined">신청 완료 ✓</span></label
+                  >
+                  <div class="join__body when-joined">
+                    <h3>함께할 준비가 됐어요!</h3>
                     <p>
                       모임 날짜와 장소를 확인하고, 함께하는 친구들과 만남 가능한
                       시간을 맞춰 보세요.
@@ -290,11 +309,10 @@
                       >친구와 공강 비교하기 →</a
                     >
                     <p class="muted">
-                      이 화면에서는 참여 방법을 안내하며 신청 내역을 저장하지
-                      않아요.
+                      참석이 어려워지면 버튼을 다시 눌러 신청을 취소해 주세요.
                     </p>
                   </div>
-                </details>
+                </div>
               </section>
               <details class="meeting-guide" open>
                 <summary>만나기 전에 확인해 주세요</summary>
@@ -354,14 +372,15 @@
               </section>
               <section class="panel" aria-labelledby="cafe-members">
                 <h2 class="panel-title" id="cafe-members">
-                  함께하는 친구들 · 3명
+                  함께하는 친구들 · <span class="when-not-joined">2명</span
+                  ><span class="when-joined">3명</span>
                 </h2>
                 <ul class="member-list">
                   <li class="member">
                     <span class="member__avatar" aria-hidden="true">별</span
                     ><strong>별송이</strong><small>모임장</small>
                   </li>
-                  <li class="member">
+                  <li class="member when-joined">
                     <span class="member__avatar" aria-hidden="true">눈</span
                     ><strong>눈송이</strong><small>함께하는 친구</small>
                   </li>
@@ -386,23 +405,32 @@
                   </div>
                   <div>
                     <dt>만나는 곳</dt>
-                    <dd>청파동 작은 카페</dd>
+                    <dd>카페 SNOW</dd>
                   </div>
                   <div>
                     <dt>함께할 인원</dt>
-                    <dd>3 / 4명 · 1명 더 함께할 수 있어요</dd>
+                    <dd>
+                      <span class="when-not-joined">2 / 4명 · 2명 더 함께할 수 있어요</span
+                      ><span class="when-joined">3 / 4명 · 1명 더 함께할 수 있어요</span>
+                    </dd>
                   </div>
                   <div>
                     <dt>준비물</dt>
                     <dd>서로를 알아갈 열린 마음</dd>
                   </div>
                 </dl>
-                <details class="join-details">
-                  <summary class="btn btn--sm btn--primary">
-                    참여 안내 보기
-                  </summary>
-                  <div class="join-details__body">
-                    <h3>함께하기 전 확인해 주세요</h3>
+                <div class="join">
+                  <input
+                    class="join__toggle sr-only"
+                    type="checkbox"
+                    id="join-cafe"
+                  />
+                  <label class="btn btn--sm btn--primary join__btn" for="join-cafe"
+                    ><span class="when-not-joined">참여 신청하기</span
+                    ><span class="when-joined">신청 완료 ✓</span></label
+                  >
+                  <div class="join__body when-joined">
+                    <h3>함께할 준비가 됐어요!</h3>
                     <p>
                       모임 날짜와 장소를 확인하고, 함께하는 친구들과 만남 가능한
                       시간을 맞춰 보세요.
@@ -411,11 +439,10 @@
                       >친구와 공강 비교하기 →</a
                     >
                     <p class="muted">
-                      이 화면에서는 참여 방법을 안내하며 신청 내역을 저장하지
-                      않아요.
+                      참석이 어려워지면 버튼을 다시 눌러 신청을 취소해 주세요.
                     </p>
                   </div>
-                </details>
+                </div>
               </section>
               <details class="meeting-guide" open>
                 <summary>만나기 전에 확인해 주세요</summary>
@@ -476,14 +503,15 @@
               </section>
               <section class="panel" aria-labelledby="exhibition-members">
                 <h2 class="panel-title" id="exhibition-members">
-                  함께하는 친구들 · 2명
+                  함께하는 친구들 · <span class="when-not-joined">1명</span
+                  ><span class="when-joined">2명</span>
                 </h2>
                 <ul class="member-list">
                   <li class="member">
                     <span class="member__avatar" aria-hidden="true">별</span
                     ><strong>별송이</strong><small>모임장</small>
                   </li>
-                  <li class="member">
+                  <li class="member when-joined">
                     <span class="member__avatar" aria-hidden="true">눈</span
                     ><strong>눈송이</strong><small>함께하는 친구</small>
                   </li>
@@ -508,19 +536,28 @@
                   </div>
                   <div>
                     <dt>함께할 인원</dt>
-                    <dd>2 / 4명 · 2명 더 함께할 수 있어요</dd>
+                    <dd>
+                      <span class="when-not-joined">1 / 4명 · 3명 더 함께할 수 있어요</span
+                      ><span class="when-joined">2 / 4명 · 2명 더 함께할 수 있어요</span>
+                    </dd>
                   </div>
                   <div>
                     <dt>준비물</dt>
                     <dd>서로를 알아갈 열린 마음</dd>
                   </div>
                 </dl>
-                <details class="join-details">
-                  <summary class="btn btn--sm btn--primary">
-                    참여 안내 보기
-                  </summary>
-                  <div class="join-details__body">
-                    <h3>함께하기 전 확인해 주세요</h3>
+                <div class="join">
+                  <input
+                    class="join__toggle sr-only"
+                    type="checkbox"
+                    id="join-exhibition"
+                  />
+                  <label class="btn btn--sm btn--primary join__btn" for="join-exhibition"
+                    ><span class="when-not-joined">참여 신청하기</span
+                    ><span class="when-joined">신청 완료 ✓</span></label
+                  >
+                  <div class="join__body when-joined">
+                    <h3>함께할 준비가 됐어요!</h3>
                     <p>
                       모임 날짜와 장소를 확인하고, 함께하는 친구들과 만남 가능한
                       시간을 맞춰 보세요.
@@ -529,11 +566,10 @@
                       >친구와 공강 비교하기 →</a
                     >
                     <p class="muted">
-                      이 화면에서는 참여 방법을 안내하며 신청 내역을 저장하지
-                      않아요.
+                      참석이 어려워지면 버튼을 다시 눌러 신청을 취소해 주세요.
                     </p>
                   </div>
-                </details>
+                </div>
               </section>
               <details class="meeting-guide" open>
                 <summary>만나기 전에 확인해 주세요</summary>
@@ -592,14 +628,15 @@
               </section>
               <section class="panel" aria-labelledby="photo-members">
                 <h2 class="panel-title" id="photo-members">
-                  함께하는 친구들 · 3명
+                  함께하는 친구들 · <span class="when-not-joined">2명</span
+                  ><span class="when-joined">3명</span>
                 </h2>
                 <ul class="member-list">
                   <li class="member">
                     <span class="member__avatar" aria-hidden="true">별</span
                     ><strong>별송이</strong><small>모임장</small>
                   </li>
-                  <li class="member">
+                  <li class="member when-joined">
                     <span class="member__avatar" aria-hidden="true">눈</span
                     ><strong>눈송이</strong><small>함께하는 친구</small>
                   </li>
@@ -628,19 +665,28 @@
                   </div>
                   <div>
                     <dt>함께할 인원</dt>
-                    <dd>3 / 5명 · 2명 더 함께할 수 있어요</dd>
+                    <dd>
+                      <span class="when-not-joined">2 / 5명 · 3명 더 함께할 수 있어요</span
+                      ><span class="when-joined">3 / 5명 · 2명 더 함께할 수 있어요</span>
+                    </dd>
                   </div>
                   <div>
                     <dt>준비물</dt>
                     <dd>서로를 알아갈 열린 마음</dd>
                   </div>
                 </dl>
-                <details class="join-details">
-                  <summary class="btn btn--sm btn--primary">
-                    참여 안내 보기
-                  </summary>
-                  <div class="join-details__body">
-                    <h3>함께하기 전 확인해 주세요</h3>
+                <div class="join">
+                  <input
+                    class="join__toggle sr-only"
+                    type="checkbox"
+                    id="join-photo"
+                  />
+                  <label class="btn btn--sm btn--primary join__btn" for="join-photo"
+                    ><span class="when-not-joined">참여 신청하기</span
+                    ><span class="when-joined">신청 완료 ✓</span></label
+                  >
+                  <div class="join__body when-joined">
+                    <h3>함께할 준비가 됐어요!</h3>
                     <p>
                       모임 날짜와 장소를 확인하고, 함께하는 친구들과 만남 가능한
                       시간을 맞춰 보세요.
@@ -649,11 +695,10 @@
                       >친구와 공강 비교하기 →</a
                     >
                     <p class="muted">
-                      이 화면에서는 참여 방법을 안내하며 신청 내역을 저장하지
-                      않아요.
+                      참석이 어려워지면 버튼을 다시 눌러 신청을 취소해 주세요.
                     </p>
                   </div>
-                </details>
+                </div>
               </section>
               <details class="meeting-guide" open>
                 <summary>만나기 전에 확인해 주세요</summary>
@@ -712,14 +757,15 @@
               </section>
               <section class="panel" aria-labelledby="walk-members">
                 <h2 class="panel-title" id="walk-members">
-                  함께하는 친구들 · 2명
+                  함께하는 친구들 · <span class="when-not-joined">1명</span
+                  ><span class="when-joined">2명</span>
                 </h2>
                 <ul class="member-list">
                   <li class="member">
                     <span class="member__avatar" aria-hidden="true">별</span
                     ><strong>별송이</strong><small>모임장</small>
                   </li>
-                  <li class="member">
+                  <li class="member when-joined">
                     <span class="member__avatar" aria-hidden="true">눈</span
                     ><strong>눈송이</strong><small>함께하는 친구</small>
                   </li>
@@ -744,19 +790,28 @@
                   </div>
                   <div>
                     <dt>함께할 인원</dt>
-                    <dd>2 / 5명 · 3명 더 함께할 수 있어요</dd>
+                    <dd>
+                      <span class="when-not-joined">1 / 5명 · 4명 더 함께할 수 있어요</span
+                      ><span class="when-joined">2 / 5명 · 3명 더 함께할 수 있어요</span>
+                    </dd>
                   </div>
                   <div>
                     <dt>준비물</dt>
                     <dd>서로를 알아갈 열린 마음</dd>
                   </div>
                 </dl>
-                <details class="join-details">
-                  <summary class="btn btn--sm btn--primary">
-                    참여 안내 보기
-                  </summary>
-                  <div class="join-details__body">
-                    <h3>함께하기 전 확인해 주세요</h3>
+                <div class="join">
+                  <input
+                    class="join__toggle sr-only"
+                    type="checkbox"
+                    id="join-walk"
+                  />
+                  <label class="btn btn--sm btn--primary join__btn" for="join-walk"
+                    ><span class="when-not-joined">참여 신청하기</span
+                    ><span class="when-joined">신청 완료 ✓</span></label
+                  >
+                  <div class="join__body when-joined">
+                    <h3>함께할 준비가 됐어요!</h3>
                     <p>
                       모임 날짜와 장소를 확인하고, 함께하는 친구들과 만남 가능한
                       시간을 맞춰 보세요.
@@ -765,11 +820,10 @@
                       >친구와 공강 비교하기 →</a
                     >
                     <p class="muted">
-                      이 화면에서는 참여 방법을 안내하며 신청 내역을 저장하지
-                      않아요.
+                      참석이 어려워지면 버튼을 다시 눌러 신청을 취소해 주세요.
                     </p>
                   </div>
-                </details>
+                </div>
               </section>
               <details class="meeting-guide" open>
                 <summary>만나기 전에 확인해 주세요</summary>

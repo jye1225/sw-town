@@ -21,7 +21,11 @@
       </header>
 
       <main id="main-content" class="page-main auth">
-        <form class="auth__box" action="#" method="post">
+        <form
+          class="auth__box"
+          action="signup.html#signup-complete"
+          method="get"
+        >
           <div class="auth__head">
             <h1 class="auth__title">회원가입</h1>
             <p class="auth__desc">새로운 친구와 나만의 순간을 시작해요.</p>
@@ -32,7 +36,6 @@
             <input
               type="email"
               id="email"
-              name="email"
               class="form-field__input"
               placeholder="이메일을 입력해 주세요"
               autocomplete="email"
@@ -42,51 +45,34 @@
 
           <div class="form-field">
             <label for="password" class="form-field__label">비밀번호</label>
-            <div class="password-field">
-              <input
-                type="password"
-                id="password"
-                name="password"
-                class="form-field__input"
-                placeholder="8자 이상 입력해 주세요"
-                minlength="8"
-                autocomplete="new-password"
-                required
-              />
-              <button
-                type="button"
-                class="password-toggle"
-                aria-controls="password"
-                aria-pressed="false"
-              >
-                보기
-              </button>
-            </div>
+            <input
+              type="password"
+              id="password"
+              class="form-field__input"
+              placeholder="8자 이상 입력해 주세요"
+              minlength="8"
+              autocomplete="new-password"
+              required
+            />
           </div>
 
           <div class="form-field">
             <label for="password-confirm" class="form-field__label"
               >비밀번호 확인</label
             >
-            <div class="password-field">
-              <input
-                type="password"
-                id="password-confirm"
-                name="passwordConfirm"
-                class="form-field__input"
-                placeholder="비밀번호를 한 번 더 입력해 주세요"
-                autocomplete="new-password"
-                required
-              />
-              <button
-                type="button"
-                class="password-toggle"
-                aria-controls="password-confirm"
-                aria-pressed="false"
-              >
-                보기
-              </button>
-            </div>
+            <input
+              type="password"
+              id="password-confirm"
+              class="form-field__input"
+              placeholder="비밀번호를 한 번 더 입력해 주세요"
+              minlength="8"
+              autocomplete="new-password"
+              aria-describedby="password-confirm-hint"
+              required
+            />
+            <p class="form-field__hint" id="password-confirm-hint">
+              위에 입력한 비밀번호와 똑같이 입력해 주세요.
+            </p>
           </div>
 
           <div class="form-field">
@@ -94,7 +80,6 @@
             <input
               type="text"
               id="nickname"
-              name="nickname"
               class="form-field__input"
               placeholder="사용할 닉네임을 입력해 주세요"
               required
@@ -107,6 +92,33 @@
             이미 회원이신가요? <a href="login.html">로그인 ›</a>
           </p>
         </form>
+
+        <section
+          class="auth__box auth-complete"
+          id="signup-complete"
+          tabindex="-1"
+          aria-labelledby="signup-complete-title"
+        >
+          <img
+            class="auth-complete__img"
+            src="images/profile/snow-avatar.svg"
+            alt=""
+            width="120"
+            height="140"
+          />
+          <div class="auth__head">
+            <h1 class="auth__title" id="signup-complete-title">
+              가입을 환영해요!
+            </h1>
+            <p class="auth__desc">
+              이제 SM TOWN에서 취향이 맞는 친구와 소모임을 만나 보세요.
+            </p>
+          </div>
+          <a href="profile-edit.html" class="btn btn--primary"
+            >내 프로필 채우러 가기</a
+          >
+          <a href="index.html" class="btn">홈으로 가기</a>
+        </section>
       </main>
 
       <footer class="site-footer site-footer--compact">
@@ -114,35 +126,6 @@
         <p>SM TOWN 팀 | 대학 팀 프로젝트</p>
       </footer>
     </div>
-
-    <script>
-      document.querySelectorAll(".password-toggle").forEach((btn) => {
-        const input = document.getElementById(btn.getAttribute("aria-controls"));
-        btn.addEventListener("click", () => {
-          const show = input.type === "password";
-          input.type = show ? "text" : "password";
-          btn.textContent = show ? "숨기기" : "보기";
-          btn.setAttribute("aria-pressed", String(show));
-        });
-      });
-
-      const password = document.getElementById("password");
-      const passwordConfirm = document.getElementById("password-confirm");
-
-      function checkPasswordMatch() {
-        const mismatch = passwordConfirm.value && password.value !== passwordConfirm.value;
-        passwordConfirm.setCustomValidity(mismatch ? "비밀번호가 일치하지 않아요." : "");
-      }
-
-      password.addEventListener("input", checkPasswordMatch);
-      passwordConfirm.addEventListener("input", checkPasswordMatch);
-
-      document.querySelector(".auth__box").addEventListener("submit", (e) => {
-        e.preventDefault();
-        alert("가입을 환영합니다!");
-        location.href = "index.html";
-      });
-    </script>
   </body>
 </html>
 <!-- --------------------- -->
