@@ -15,9 +15,9 @@
   flex-shrink: 0;
   width: 120px;
   height: 140px;
-  border: 1px solid #d9dcc8;
+  border: 1px solid var(--color-olive-border);
   border-radius: 10px;
-  background: #e4e8d8;
+  background: var(--color-olive-light);
   object-fit: cover;
 }
 
@@ -74,8 +74,8 @@
 }
 
 .shortcut:hover {
-  border-color: #a7ab92;
-  background: #f3f2e9;
+  border-color: var(--color-olive-line);
+  background: var(--color-surface-sunken);
 }
 
 .shortcut__icon {
@@ -84,7 +84,7 @@
   height: 36px;
   place-items: center;
   border-radius: 10px;
-  background: #e8e9dc;
+  background: var(--color-olive-light);
   color: var(--color-olive);
 }
 
@@ -123,9 +123,9 @@
   width: 48px;
   height: 48px;
   place-items: center;
-  border: 1px solid #d3d7be;
+  border: 1px solid var(--color-olive-border);
   border-radius: 8px;
-  background: #e6e8d8;
+  background: var(--color-olive-light);
   color: var(--color-olive);
 }
 
@@ -316,9 +316,9 @@
 }
 
 .interest-choice input:checked + span {
-  border-color: #6b7657;
-  background: #e2e6d3;
-  color: #3e4b32;
+  border-color: var(--color-olive-strong);
+  background: var(--color-olive-light);
+  color: var(--color-olive-dark);
   font-weight: 600;
 }
 

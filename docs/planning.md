@@ -47,6 +47,18 @@
 | `--color-brand` | `#855936` | 로고 · 강조 |
 | `--color-active` | `#dbddbd` | 선택된 메뉴 · 탭 |
 | `--color-primary` | `#35454e` | 주요 버튼 |
+| `--color-muted` | `#6a6458` | 설명 · 안내 글자 |
+| `--color-olive` | `#566047` | 아이콘 · 포인트 글자 |
+| `--color-paper` | `#fffdf9` | 태그 · 표 셀 배경 |
+| `--color-white` · `--color-white-soft` | `#fff` · 85% 흰색 | 사진 위 글자 |
+| `--color-surface-sunken` · `--color-surface-strong` | `#efede6` · `#e8e5dd` | 안내 상자 · 표 머리 · 버튼 hover |
+| `--color-primary-hover` · `--color-active-hover` · `--color-active-border` | `#26373f` · `#cfd2ad` · `#c4c9a4` | 버튼 상태 |
+| `--color-disabled` | `#696e69` | 비활성 버튼 |
+| `--color-olive-*` | `light` `#e6e8d8` · `border` `#d3d7be` · `line` `#a5ae96` · `strong` `#6b7657` · `dark` `#435039` | 올리브 계열 태그 · 아바타 · 선택 상태 |
+| `--color-warm-*` | `light` `#eaded8` · `border` `#dfcdbd` · `dark` `#765642` | 따뜻한 계열 아바타 · 수업 칸 |
+| `--color-sage-*` | `light` `#e2e8e4` · `dark` `#405b55` | 세이지 계열 아바타 · 수업 칸 |
+| `--color-rose` | `#8d534d` | 추천 넘기기(✕) 버튼 |
+| `--color-time-*` | `course` `#e8e9dc` · `free` `#e2e6d3` · `shared` `#cbd8b4` · `shared-text` `#304126` | 시간표 수업 · 빈 시간 · 함께 가능 |
 
 ### 글꼴과 레이아웃
 
