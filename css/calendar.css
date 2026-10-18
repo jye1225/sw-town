@@ -21,11 +21,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
 }
 
 .month-nav__current {
   font-size: 28px;
   font-weight: 700;
+}
+
+.month-nav__boundary {
+  min-width: 90px;
+  color: var(--color-muted);
+  font-size: 12px;
+  text-align: center;
 }
 
 /* 달력 */
@@ -55,6 +63,7 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  min-width: 0;
   height: 225px;
   padding: 10px;
   border: 0.5px solid var(--color-border);
@@ -62,12 +71,43 @@
   font-size: 15px;
 }
 
+.day--record {
+  padding: 0;
+}
+
+.day.is-empty {
+  background: transparent;
+}
+
+/* 기록이 있는 날짜 */
+.day__link {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px;
+}
+
+.day__link:hover {
+  background: var(--color-active);
+}
+
+.day__link:focus-visible {
+  outline-offset: -4px;
+}
+
+.day__link .day__photo {
+  min-height: 0;
+  max-height: 155px;
+}
+
 .day__photo {
   width: 100%;
   height: auto;
   aspect-ratio: 1 / 1;
   border-radius: var(--radius-sm);
-  background: #fff;
+  background: var(--color-white);
   object-fit: cover;
 }
 
@@ -141,6 +181,102 @@
   font-size: 16px;
 }
 
+/* 화면 전환: 주소 조각(#month-10, #record-1010 등)으로 한 달, 한 날짜의 기록만 보여 줍니다. */
+.calendar-month {
+  display: none;
+  scroll-margin-top: 24px;
+}
+
+.calendar-month--default {
+  display: grid;
+  gap: 24px;
+}
+
+:is(
+    .calendar-browser:has(#month-09:target, [id^="record-09"]:target),
+    .calendar-browser:has(#month-10:target, [id^="record-10"]:target),
+    .calendar-browser:has(#month-11:target, [id^="record-11"]:target)
+  )
+  .calendar-month {
+  display: none;
+}
+
+.calendar-browser:has(#month-09:target, [id^="record-09"]:target) #month-09,
+.calendar-browser:has(#month-10:target, [id^="record-10"]:target) #month-10,
+.calendar-browser:has(#month-11:target, [id^="record-11"]:target) #month-11 {
+  display: grid;
+  gap: 24px;
+}
+
+.month-records .record-detail {
+  display: none;
+  scroll-margin-top: 24px;
+}
+
+.month-records .record-detail--default {
+  display: flex;
+}
+
+.month-records:has(.record-detail:target) .record-detail {
+  display: none;
+}
+
+.month-records:has(.record-detail:target) .record-detail:target {
+  display: flex;
+}
+
+/* 선택한 날짜 표시 */
+.calendar-month:not(:has(.record-detail:target)) .day__link--default {
+  box-shadow: inset 0 0 0 2px var(--color-text-sub);
+}
+
+.calendar-month:has(#record-0918:target) .day__link[href="#record-0918"],
+.calendar-month:has(#record-0925:target) .day__link[href="#record-0925"],
+.calendar-month:has(#record-1003:target) .day__link[href="#record-1003"],
+.calendar-month:has(#record-1010:target) .day__link[href="#record-1010"],
+.calendar-month:has(#record-1014:target) .day__link[href="#record-1014"],
+.calendar-month:has(#record-1015:target) .day__link[href="#record-1015"],
+.calendar-month:has(#record-1018:target) .day__link[href="#record-1018"],
+.calendar-month:has(#record-1106:target) .day__link[href="#record-1106"],
+.calendar-month:has(#record-1113:target) .day__link[href="#record-1113"] {
+  box-shadow: inset 0 0 0 2px var(--color-text-sub);
+  font-weight: 700;
+}
+
+/* 본문 바로가기: 현재 주소 조각에 맞는 링크 하나만 보여 줍니다. */
+body:has(
+    #month-09:target,
+    #month-10:target,
+    #month-11:target,
+    #record-0918:target,
+    #record-0925:target,
+    #record-1003:target,
+    #record-1010:target,
+    #record-1014:target,
+    #record-1015:target,
+    #record-1018:target,
+    #record-1106:target,
+    #record-1113:target
+  )
+  .state-skip {
+  display: none;
+}
+
+body:has(#month-09:target) .state-skip[href="#month-09"],
+body:has(#month-10:target) .state-skip[href="#month-10"],
+body:has(#month-11:target) .state-skip[href="#month-11"],
+body:has(#record-0918:target) .state-skip[href="#record-0918"],
+body:has(#record-0925:target) .state-skip[href="#record-0925"],
+body:has(#record-1003:target) .state-skip[href="#record-1003"],
+body:has(#record-1010:target) .state-skip[href="#record-1010"],
+body:has(#record-1014:target) .state-skip[href="#record-1014"],
+body:has(#record-1015:target) .state-skip[href="#record-1015"],
+body:has(#record-1018:target) .state-skip[href="#record-1018"],
+body:has(#record-1106:target) .state-skip[href="#record-1106"],
+body:has(#record-1113:target) .state-skip[href="#record-1113"] {
+  display: block;
+}
+
 /* 반응형 */
 @media (max-width: 1000px) {
   .day {
@@ -175,8 +311,20 @@
     font-size: 14px;
   }
 
+  .day--record {
+    padding: 0;
+  }
+
+  .day__link {
+    padding: 6px;
+  }
+
   .day__photo {
     border-radius: 4px;
+  }
+
+  .month-nav__boundary {
+    min-width: 62px;
   }
 
   .calendar-info {
@@ -206,184 +354,4 @@
   }
 }
 
-/* 주소 조각으로 월과 날짜를 선택합니다. 한 번에 한 달, 한 날짜의 기록만 표시합니다. */
-.calendar-month {
-  display: none;
-  scroll-margin-top: 24px;
-}
-.calendar-month--default {
-  display: grid;
-  gap: 24px;
-}
-.month-nav {
-  gap: 12px;
-}
-.month-nav__boundary {
-  min-width: 90px;
-  color: var(--color-muted);
-  font-size: 12px;
-  text-align: center;
-}
-.day {
-  min-width: 0;
-}
-.day--record {
-  padding: 0;
-}
-.day.is-empty {
-  background: transparent;
-}
-.day__link {
-  display: flex;
-  flex: 1;
-  min-height: 0;
-  flex-direction: column;
-  gap: 4px;
-  padding: 10px;
-}
-.day__link:hover {
-  background: var(--color-active);
-}
-.day__link:focus-visible {
-  outline-offset: -4px;
-}
-.day__link .day__photo {
-  min-height: 0;
-  max-height: 155px;
-}
-.month-records .record-detail {
-  display: none;
-  scroll-margin-top: 24px;
-}
-.month-records .record-detail--default {
-  display: flex;
-}
-.month-records:has(.record-detail:target) .record-detail {
-  display: none;
-}
-.month-records:has(.record-detail:target) .record-detail:target {
-  display: flex;
-}
-.calendar-month:not(:has(.record-detail:target)) .day__link--default {
-  box-shadow: inset 0 0 0 2px var(--color-text-sub);
-}
-:is(
-    .calendar-browser:has(#month-09:target, [id^="record-09"]:target),
-    .calendar-browser:has(#month-10:target, [id^="record-10"]:target),
-    .calendar-browser:has(#month-11:target, [id^="record-11"]:target)
-  )
-  .calendar-month {
-  display: none;
-}
-.calendar-browser:has(#month-09:target, [id^="record-09"]:target) #month-09 {
-  display: grid;
-  gap: 24px;
-}
-.calendar-month:has(#record-0918:target) .day__link[href="#record-0918"] {
-  box-shadow: inset 0 0 0 2px var(--color-text-sub);
-  font-weight: 700;
-}
-.calendar-month:has(#record-0925:target) .day__link[href="#record-0925"] {
-  box-shadow: inset 0 0 0 2px var(--color-text-sub);
-  font-weight: 700;
-}
-.calendar-browser:has(#month-10:target, [id^="record-10"]:target) #month-10 {
-  display: grid;
-  gap: 24px;
-}
-.calendar-month:has(#record-1003:target) .day__link[href="#record-1003"] {
-  box-shadow: inset 0 0 0 2px var(--color-text-sub);
-  font-weight: 700;
-}
-.calendar-month:has(#record-1010:target) .day__link[href="#record-1010"] {
-  box-shadow: inset 0 0 0 2px var(--color-text-sub);
-  font-weight: 700;
-}
-.calendar-month:has(#record-1014:target) .day__link[href="#record-1014"] {
-  box-shadow: inset 0 0 0 2px var(--color-text-sub);
-  font-weight: 700;
-}
-.calendar-month:has(#record-1015:target) .day__link[href="#record-1015"] {
-  box-shadow: inset 0 0 0 2px var(--color-text-sub);
-  font-weight: 700;
-}
-.calendar-month:has(#record-1018:target) .day__link[href="#record-1018"] {
-  box-shadow: inset 0 0 0 2px var(--color-text-sub);
-  font-weight: 700;
-}
-.calendar-browser:has(#month-11:target, [id^="record-11"]:target) #month-11 {
-  display: grid;
-  gap: 24px;
-}
-.calendar-month:has(#record-1106:target) .day__link[href="#record-1106"] {
-  box-shadow: inset 0 0 0 2px var(--color-text-sub);
-  font-weight: 700;
-}
-.calendar-month:has(#record-1113:target) .day__link[href="#record-1113"] {
-  box-shadow: inset 0 0 0 2px var(--color-text-sub);
-  font-weight: 700;
-}
-
-@media (max-width: 760px) {
-  .day__link {
-    padding: 6px;
-  }
-  .month-nav__boundary {
-    min-width: 62px;
-    font-size: 12px;
-  }
-}
-body:has(
-    #month-09:target,
-    #month-10:target,
-    #month-11:target,
-    #record-0918:target,
-    #record-0925:target,
-    #record-1003:target,
-    #record-1010:target,
-    #record-1014:target,
-    #record-1015:target,
-    #record-1018:target,
-    #record-1106:target,
-    #record-1113:target
-  )
-  .state-skip {
-  display: none;
-}
-body:has(#month-09:target) .state-skip[href="#month-09"] {
-  display: block;
-}
-body:has(#month-10:target) .state-skip[href="#month-10"] {
-  display: block;
-}
-body:has(#month-11:target) .state-skip[href="#month-11"] {
-  display: block;
-}
-body:has(#record-0918:target) .state-skip[href="#record-0918"] {
-  display: block;
-}
-body:has(#record-0925:target) .state-skip[href="#record-0925"] {
-  display: block;
-}
-body:has(#record-1003:target) .state-skip[href="#record-1003"] {
-  display: block;
-}
-body:has(#record-1010:target) .state-skip[href="#record-1010"] {
-  display: block;
-}
-body:has(#record-1014:target) .state-skip[href="#record-1014"] {
-  display: block;
-}
-body:has(#record-1015:target) .state-skip[href="#record-1015"] {
-  display: block;
-}
-body:has(#record-1018:target) .state-skip[href="#record-1018"] {
-  display: block;
-}
-body:has(#record-1106:target) .state-skip[href="#record-1106"] {
-  display: block;
-}
-body:has(#record-1113:target) .state-skip[href="#record-1113"] {
-  display: block;
-}
 /* --------------------- */

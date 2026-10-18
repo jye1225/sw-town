@@ -76,7 +76,7 @@
   display: grid;
   place-items: center;
   position: relative;
-  background: linear-gradient(135deg, #dbddbd, #e8ded1);
+  background: linear-gradient(135deg, var(--color-active), var(--color-warm-light));
 }
 .avatar-large {
   width: 146px;
@@ -133,7 +133,7 @@
   cursor: pointer;
 }
 .circle-btn.no {
-  color: #8d534d;
+  color: var(--color-rose);
 }
 .circle-btn.yes {
   color: var(--color-olive);
@@ -159,7 +159,7 @@
 .hint {
   margin-top: 20px;
   padding: 18px;
-  background: #eeece4;
+  background: var(--color-surface-sunken);
   border-radius: 8px;
 }
 .hint p {
@@ -200,13 +200,13 @@
   flex-shrink: 0;
   object-fit: cover;
   border-radius: 12px;
-  background: #e6e8d8;
+  background: var(--color-olive-light);
 }
 .avatar--star {
-  background: #eaded8;
+  background: var(--color-warm-light);
 }
 .avatar--moon {
-  background: #dfe9df;
+  background: var(--color-sage-light);
 }
 .friend-copy {
   flex: 1;
